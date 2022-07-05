@@ -1,0 +1,178 @@
+
+body {
+  padding: 10px;
+  background-color: #F4F4F4;
+}
+
+p {
+  line-height: 40px;
+}
+
+/* les styles pour le texte qui apparait sur les slides du carousel */
+
+.texte-Ligne1 {
+  color: white;
+  font-weight: bold;
+  font-size: 2.8em;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+
+.texte-Ligne2 {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+
+
+.texte-std {
+  font-size:20px;
+  line-height: 1.8rem;
+}
+
+
+.style-bold {
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* les posiitons des textes pour les slides du carousel */
+
+.slide1-pos1 {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width:40% ;
+  z-index: 20;
+  transition: width 2s;
+}
+
+.slide1-pos2 {
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    width:40% ;
+    z-index: 20;
+    transition: width 2s;
+  }
+  
+
+.slide2-pos1 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  width:40%;
+  z-index: 20;
+  transition: width 2s;
+}
+
+.slide2-pos2 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width:40%;
+
+    z-index: 20;
+    transition: width 2s;
+}
+  
+
+.slide3-pos1 {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width:40%;
+
+  z-index: 20;
+  transition: width 2s;
+}
+
+.slide3-pos2 {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width:40%;
+
+    z-index: 20;
+    transition: width 2s;
+}
+
+
+
+
+
+
+/* effet Ken Burns*/
+
+#imageContainerKenBurns {
+  background-color: #333;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  border: 2px #333 solid;
+}
+
+#imageContainerKenBurns img {
+animation: kenburns 30s infinite;
+}
+
+
+
+@keyframes kenburns {
+  0% {
+  opacity: 0;
+  }
+  5% {
+  opacity: 1;
+  }
+  100% {
+  transform: scale3d(1.3, 1.3, 1.3) translate3d(-160px, -120px, 0px);
+  animation-timing-function: ease-in;
+  opacity: 1;
+  }
+}
+
+
+
+
+#imageContainerKenBurns2 {
+  background-color: #333;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  border: 2px #333 solid;
+}
+
+
+
+#imageContainerKenBurns2 img {
+  animation: kenburns2 30s infinite;
+  }
+  
+
+@keyframes kenburns2 {
+  0% {
+  opacity: 0;
+  }
+  5% {
+  opacity: 1;
+  }
+  100% {
+  transform: scale3d(1.3, 1.3, 1.3) translate3d(200px, -120px, 0px);
+  animation-timing-function: ease-in;
+  opacity: 1;
+  }
+}
+
+
+
+
+
+
+

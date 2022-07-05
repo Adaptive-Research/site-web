@@ -1,0 +1,71 @@
+
+<div class="container" style="margin-top:3%" >
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+
+        <form  class="form-style-9" action="./create-User" method="post">
+
+            <div  style="border:1px solid #AAAAFF ; background-color:#FAFAFA" >
+             <table class="table" style="background-color:#FAFAFA ;  width:100% ; height:100%" >
+
+                <tr>
+                    <td><b>Genre</b></td>
+                    <td>
+                        <select name="Genre">
+                            <option value="Homme">Homme</option>
+                            <option value="Femme">Femme</option>
+                        </select>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td><b>Prénom</b></td>
+                    <td><input type="text" name="Prenom" style="width:100%;border:1px solid #BBBBFF" class="field-style field-full"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Nom</b></td>
+                    <td><input type="text" name="Nom" style="width:100%;border:1px solid #BBBBFF" class="field-style field-full"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Email</b></td>
+                    <td><input type="email" name="Email" style="width:100%;border:1px solid #BBBBFF" class="field-style field-full"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Mot de passe</b></td>
+                    <td><input type="password" name="Password1" style="width:100%;border:1px solid #BBBBFF" class="field-style field-full" ></td>
+                </tr>
+
+                <tr>
+                    <td><b>Mot de passe</b></td>
+                    <td><input type="password" name="Password2" style="width:100%;border:1px solid #BBBBFF" class="field-style field-full"></td>
+                </tr>
+
+
+                <tr>
+                    <td><b>Langue</b></td>
+                    <td><select class="" style="width:100%" name="Langue">
+[OPTIONS_LANGUE]
+                    </select></td>
+                </tr>
+
+
+                <tr>
+                    <td><b>Type de poste</b></td>
+                    <td><select class="" style="width:100%" name="group_name">
+[OPTIONS_GROUP]
+                    </select></td>
+                </tr>
+              </table>
+           </div>
+
+            <input style="background-color:#3b5998;color:white ; margin-top:25px" type="submit" name="Submit"  value="Enregistrer" />
+
+        </form>
+
+        </div>
+    </div>
+</div>

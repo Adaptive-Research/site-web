@@ -1,0 +1,35 @@
+<br><br><br><br>
+
+<div style="text-align:center;">
+  <form  style="display: inline-block;" method="post">
+
+    <table>
+      <tr>
+         
+
+         <td><b>Zone géographique</b></td>
+         <td style="width:10px"></td>
+         <td>
+          <select id="ListeZonesGeo" name="ZoneGeo" style="width:100%" onchange="GetVilles('[SERVEUR_WEB]',this.value)">
+            [OPTIONS_ZONEGEO]
+          </select>
+         </td>
+         <td style="width:50px"></td>
+
+
+         <td><b>Ville</b></td>
+         <td style="width:10px"></td>
+         <td>
+             <select id="ListeVilles" name="Ville" style="width:100%" ">
+               [OPTIONS_VILLE]
+             </select>
+         </td>
+         <td style="width:50px"></td>
+
+         <td>
+           <input style="background-color:#3b5998;color:white; Height:30px " type="submit" name="Submit"  value="Chercher" />
+         </td>
+      </tr>
+    </table>
+  </form>
+</div>

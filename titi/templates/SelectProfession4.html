@@ -1,0 +1,33 @@
+<br><br><br><br>
+
+<div style="text-align:center;">
+  <form  style="display: inline-block;" method="post">
+
+    <table>
+      <tr>
+         <td><b>Profession</b></td>
+         <td style="width:10px"></td>
+         <td>
+             <select id="ListeProfession" name="Profession" style="width:100%" onchange="GetRunForProfession('[SERVEUR_WEB]',this.value)">
+               [OPTIONS_PROFESSION]
+             </select>
+         </td>
+         <td style="width:50px"></td>
+
+
+
+         <td><b>Lancements</b></td>
+         <td style="width:10px"></td>
+         <td>
+             <select id="ListeRun" name="Run" style="width:100%" onchange="ShowValue(this.value)">
+               [OPTIONS_RUN]
+             </select>
+         </td>
+         <td style="width:50px"></td>
+         <td>
+           <input style="background-color:#3b5998;color:white; Height:30px " type="submit" name="Submit"  value="Chercher" />
+         </td>
+      </tr>
+    </table>
+  </form>
+</div>

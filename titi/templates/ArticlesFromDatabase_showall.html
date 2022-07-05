@@ -1,0 +1,28 @@
+
+<br><br><br><br>
+  <div style="text-align:center;">
+    <form  style="display: inline-block;" action="./show-Articles-From-Database" method="post">
+      <table>
+        <tr>
+          <td><b>Secteur d'activité</b></td>
+          <td>
+            <select id="ListeActivity" name="Activity" style="width:100%">
+              [OPTIONS_ACTIVITY]
+            </select>
+          </td>
+          
+          <td> <b>Mots clés</b> </td>
+          <td style="width:400px"><input style="width:100%" type="text" name="Keywords" ></td>
+
+
+          <td> <b>Mots à chercher dans les titres</b> </td>
+          <td style="width:400px"><input style="width:100%" type="text" name="KeywordsTitre" ></td>
+          
+          <td> <b>Domaine</b> </td>
+          <td style="width:200px"><input style="width:100%" type="text" name="Domain" ></td>
+          
+          <td><input type="submit" name="Submit"  value="Chercher les articles" /></td>
+          </tr>
+      </table>
+    </form>
+  </div>

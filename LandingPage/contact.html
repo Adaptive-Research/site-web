@@ -1,0 +1,182 @@
+
+
+        <!-- Title Section -->           
+        <section class="title-section">
+            <div class="container">
+
+
+                <!-- Title - Search--> 
+                <div class="row title">
+                    <!-- Title --> 
+                    <div class="col-md-9">
+                        <h1>Nous contacter
+                            <span class="subtitle-section">
+                                Envoyez nous un Email
+                                <span class="left"></span>
+                                <span class="right"></span>
+                            </span>
+                            <span class="line-title"></span>
+                        </h1>
+                    </div>
+                    <!-- End Title--> 
+
+                </div>
+                <!-- End Title -Search --> 
+              
+            </div>
+        </section>   
+        <!-- End Title Section --> 
+
+
+
+
+
+
+
+
+
+        <!-- Contact Us -->
+        <section class="paddings">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Sidebars -->
+                    <div class="col-md-2 sidebars">
+
+                    </div>
+
+                    <!-- Content Right -->
+                    <div class="col-md-8">
+
+                        
+                        <!-- Tabs -->
+                        <div class="tabs">
+                            <!-- Tab nav -->
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#contactUs" data-toggle="tab">
+                                    <i class="fa fa-envelope"></i> Nous contacter</a>
+                                </li>
+                                <li class=""><a href="#support" data-toggle="tab">
+                                    <i class="fa fa-bullhorn"></i>Support</a>
+                                </li>
+                            </ul>
+                            <!-- End Tab nav -->
+
+                            <!-- Tab Content -->
+                            <div class="tab-content">
+                                <!-- Tab item -->
+                                <div class="tab-pane active" id="contactUs">
+                                    
+                                    <!-- Form Contact -->
+                                    <form class="form-contact" action="php/send-mail-contact.php">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Votre Nom *</label>
+                                                    <input type="text"  required="required" value="" maxlength="100" class="form-control" name="Name" id="name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Votre adresse Mail *</label>
+                                                    <input type="email"  required="required" value="" maxlength="100" class="form-control" name="Email" id="email">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <label>Votre message *</label>
+                                                    <textarea maxlength="5000" rows="10" class="form-control" name="message"  style="height: 138px;" required="required" ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <input type="submit" value="Envoyer le Message" class="btn btn-lg btn-primary">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End Form Contact --> 
+                                    <div class="result"></div>
+                                </div>
+                                <!-- End Tab item -->
+
+                                <!-- Tab item -->
+                                <div class="tab-pane" id="support">
+                                    
+                                    <h4>Support</h4>
+
+                                    <!-- Form Contact -->
+                                    <form class="form-contact" action="php/send-mail-support.php">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Your name *</label>
+                                                    <input type="text"  required="required" value="" maxlength="100" class="form-control" name="Name">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Your email address *</label>
+                                                    <input type="email"  required="required" value="" maxlength="100" class="form-control" name="Email">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Subject</label>
+                                                    <input type="text"  required="required" value="" class="form-control" name="Subject">
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Phone</label>
+                                                    <input type="number"  required="required" value="" class="form-control" name="Phone">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Problem</label>
+                                                <select class="form-control" name="Problem">
+                                                  <option>Licence</option>
+                                                  <option>Network</option>
+                                                  <option>Software</option>                                                  
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <label>Comment *</label>
+                                                    <textarea maxlength="5000" rows="10" class="form-control" name="message"  style="height: 138px;" required="required" ></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <input type="submit" value="Send Message" class="btn btn-lg btn-primary">
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End Form Contact --> 
+                                    <div class="result"></div>
+                                </div>
+                                <!-- End Tab item -->
+
+                            </div>
+                            <!-- End Tab Content -->
+                        </div>  
+                        <!-- End Tabs -->                     
+
+                    </div>
+                    <!-- End Content Right -->
+
+
+                </div>
+            </div>
+            <!-- End Container-->
+        </section>
+        <!-- End Contact Us-->
+
+
+

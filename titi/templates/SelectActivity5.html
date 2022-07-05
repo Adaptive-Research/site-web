@@ -1,0 +1,41 @@
+<br><br><br><br>
+
+<div style="text-align:center;">
+  <form  style="display: inline-block;" method="post">
+
+    <table>
+      <tr>
+         <td><b>Secteur d'activité</b></td>
+         <td style="width:10px"></td>
+         <td>
+             <select id="ListeActivity" name="Activity" style="width:100%" onchange="GetRun('[SERVEUR_WEB]',this.value)">
+               [OPTIONS_ACTIVITY]
+             </select>
+         </td>
+         <td style="width:30px"></td>
+
+         <td><b>Lancements</b></td>
+         <td style="width:10px"></td>
+         <td>
+             <select id="ListeRun" name="Run" style="width:100%" onchange="GetDomaines('[SERVEUR_WEB]',this.value)">
+               [OPTIONS_RUN]
+             </select>
+         </td>
+         <td style="width:30px"></td>
+
+         <td><b>Domaines</b></td>
+         <td style="width:10px"></td>
+         <td>
+             <select id="ListeDomaines" name="Domaine" style="width:100%" onchange="ShowValue(this.value)">
+               [OPTIONS_DOMAINE]
+             </select>
+         </td>
+
+         <td style="width:50px"></td>
+         <td>
+           <input style="background-color:#3b5998;color:white; Height:30px " type="submit" name="Submit"  value="Chercher" />
+         </td>
+      </tr>
+    </table>
+  </form>
+</div>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 247 75">
+    <defs>
+        <linearGradient id="VTGradient_Letter_V1" gradientUnits="userSpaceOnUse" x1="31.484" y1="2.071" x2="22.657" y2="31.581">
+            <stop offset="0" stop-color="#e3097e" />
+            <stop offset="1" stop-color="#8c1e80" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_V1_shadow" gradientUnits="userSpaceOnUse" x1="17.757" y1="26.829" x2="24.513" y2="24.313">
+            <stop offset=".1" stop-opacity=".6" />
+            <stop offset="1" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_V1_over" gradientUnits="userSpaceOnUse" x1="-8.088" y1="-8.424" x2="21.187" y2="29.932">
+            <stop offset="0" stop-color="#512680" />
+            <stop offset=".203" stop-color="#572580" />
+            <stop offset=".469" stop-color="#672380" />
+            <stop offset=".768" stop-color="#821f80" />
+            <stop offset="1" stop-color="#9c1b80" />
+        </linearGradient>
+
+        <linearGradient id="VTGradient_Letter_I" gradientUnits="userSpaceOnUse" x1="44.769" y1="9.164" x2="44.769" y2="36.686">
+            <stop offset="0" stop-color="#6658a0" />
+            <stop offset=".082" stop-color="#5e61a7" />
+            <stop offset=".705" stop-color="#249fd9" />
+            <stop offset="1" stop-color="#0db8ed" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_I_shadow" gradientUnits="userSpaceOnUse" x1="53.949" y1="14.434" x2="44.426" y2="20.929">
+            <stop offset=".5" stop-opacity=".4" />
+            <stop offset="1" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_I_over" gradientUnits="userSpaceOnUse" x1="42.405" y1="1.261" x2="51.393" y2="19.171">
+            <stop offset="0" stop-color="#944b96" />
+            <stop offset=".047" stop-color="#904e98" />
+            <stop offset=".418" stop-color="#7561a7" />
+            <stop offset=".748" stop-color="#656db1" />
+            <stop offset="1" stop-color="#5f71b4" />
+        </linearGradient>
+
+        <linearGradient id="VTGradient_Letter_V2" gradientUnits="userSpaceOnUse" x1="82.025" y1="2.071" x2="73.198" y2="31.581">
+            <stop offset="0" stop-color="#c5d209" />
+            <stop offset="1" stop-color="#4abbc6" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_V2_shadow" gradientUnits="userSpaceOnUse" x1="68.299" y1="26.829" x2="75.054" y2="24.313">
+            <stop offset=".1" stop-opacity=".5" />
+            <stop offset="1" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_V2_over" gradientUnits="userSpaceOnUse" x1="42.453" y1="-8.423" x2="71.728" y2="29.932">
+            <stop offset="0" stop-color="#2eade4" />
+            <stop offset="1" stop-color="#89c8b5" />
+        </linearGradient>
+
+
+        <linearGradient id="VTGradient_Letter_A" gradientUnits="userSpaceOnUse" x1="87.499" y1="38.904" x2="96.939" y2="12.239">
+            <stop offset="0" stop-color="#c5d209" />
+            <stop offset="1" stop-color="#f49b05" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_A_shadow" gradientUnits="userSpaceOnUse" x1="101.919" y1="10.193" x2="96.353" y2="15.576">
+            <stop offset=".1" stop-opacity=".6" />
+            <stop offset="1" stop-opacity="0" />
+        </linearGradient>
+        <linearGradient id="VTGradient_Letter_A_over" gradientUnits="userSpaceOnUse" x1="99.427" y1="3.209" x2="110.806" y2="39.12">
+            <stop offset="0" stop-color="#fdca09" />
+            <stop offset=".234" stop-color="#f6960d" />
+            <stop offset=".604" stop-color="#eb4a12" />
+            <stop offset=".869" stop-color="#e41916" />
+            <stop offset="1" stop-color="#e10717" />
+        </linearGradient>
+
+    </defs>
+    <g>
+        <g id="logoViva">
+            <path fill="url(#VTGradient_Letter_V1)" d="M27.3 2.3L19.6 25h-.1l.1.4c.6 1.8 3.6 9.9 6.2 8L36.6 2.3h-9.3z" />
+            <path fill="url(#VTGradient_Letter_V1_shadow)" d="M25.3 21.3l-.1-.4-2.1-6.3L19.6 25h-.1l-.9 3 2.2 6.2h4.8l2.5-7.1c-1.4-2.1-2.4-4.9-2.8-5.8z" />
+            <path fill="url(#VTGradient_Letter_V1_over)" d="M19.6 25.4l-.1-.4-7.6-22.7H2.4l11.8 33.9c.6 1.3 1.8 2.2 3.2 2.2H24l1.7-4.9c-2.5 1.8-5.4-6.2-6.1-8.1z" />
+
+            <path fill="url(#VTGradient_Letter_I)" d="M49.1 4.8c-.5-1.5-1.9-2.6-3.5-2.6h-5.2v36.1h8.7V4.8z" />
+            <path fill="url(#VTGradient_Letter_I_shadow)" d="M49.1 6.3h-8.7v13.2c3-1.3 6.4 9.1 6.4 9.1l2.3 6.5V6.3z" />
+            <path fill="url(#VTGradient_Letter_I_over)" d="M49.1 4.8c-.5-1.4-1.8-2.5-3.3-2.6h-5.4v4.9c2.8-2.1 6.3 8.4 6.3 8.4l2.4 6.8V4.8z" />
+
+            <path fill="url(#VTGradient_Letter_V2)" d="M77.8 2.3L70.1 25H70l.1.4c.6 1.8 3.6 9.9 6.2 8L87.1 2.3h-9.3z" />
+            <path fill="url(#VTGradient_Letter_V2_shadow)" d="M75.9 21.3l-.1-.4-2.1-6.3L70.1 25H70l-.9 3 2.2 6.2h4.8l2.5-7.1c-1.4-2.1-2.4-4.9-2.7-5.8z" />
+            <path fill="url(#VTGradient_Letter_V2_over)" d="M70.1 25.4L70 25 62.4 2.3H53l11.8 33.9c.6 1.3 1.8 2.2 3.2 2.2h6.6l1.7-4.9c-2.5 1.8-5.5-6.2-6.2-8.1z" />
+
+            <path fill="url(#VTGradient_Letter_A)" d="M100.1 15.2c-.6-1.8-3.6-9.9-6.2-8L83.2 38.3h9.3l7.7-22.8h.1l-.2-.3z" />
+            <path fill="url(#VTGradient_Letter_A_shadow)" d="M100.1 15.2c-.6-1.8-3.6-9.9-6.2-8l-2.2 6.3c1.3 2.1 2.3 4.8 2.6 5.8l.1.4 2.1 6.3 3.5-10.4h.1v-.4z" />
+            <path fill="url(#VTGradient_Letter_A_over)" d="M100.1 15.2l.1.4 7.6 22.8h9.4L105.5 4.5c-.6-1.3-1.8-2.2-3.2-2.2h-6.6L94 7.2c2.5-1.9 5.5 6.1 6.1 8z" />
+        </g>
+
+        <g id="logoDate">
+            <path fill="currentColor" d="M129.2,13.4h1.4v0.5c0,2.2,1.3,3,2.6,3    c1.3,0,2.6-0.7,2.6-2.9V5h-3.5V3.7h4.9V14c0,3.1-2,4.2-4,4.2c-1.9,0-4-1.2-4-4.2V13.4z" />
+            <path fill="currentColor" d="M141.4,3.7h1.4V13c0,2.5,1.6,3.9,4,3.9    c2.5,0,4.1-1.5,4.1-4V3.7h1.4V13c0,3.2-2.2,5.2-5.4,5.2c-3.2,0-5.5-2-5.5-5.2V3.7z" />
+            <path fill="currentColor" d="M156.7,3.7h1.4l7.3,10.3    c0.5,0.7,1.2,1.9,1.2,1.9h0c0,0-0.1-1.2-0.1-1.9V3.7h1.4V18h-1.4l-7.3-10.3C158.7,7,158,5.8,158,5.8h0c0,0,0.1,1.2,0.1,1.9V18    h-1.4V3.7z" />
+            <path fill="currentColor" d="M172.4,3.7h8V5h-6.6v5.2h5.4v1.3h-5.4v5.3h7V18    h-8.4V3.7z" />
+            <path fill="currentColor" d="M189.3,16.7h3.2V6.2c0-0.4,0-0.8,0-0.8h0    c0,0-0.1,0.3-0.7,0.9l-1.5,1.5l-0.9-0.9l3.2-3.2h1.3v13h3.1V18h-7.7V16.7z" />
+            <path fill="currentColor" d="M211.1,11.6h5.8v1.3h-5.8V11.6z" />
+            <path fill="currentColor" d="M220.5,16.7h3.2V6.2c0-0.4,0-0.8,0-0.8h0    c0,0-0.1,0.3-0.7,0.9l-1.5,1.5l-0.9-0.9l3.2-3.2h1.3v13h3.1V18h-7.7V16.7z" />
+            <path fill="currentColor" d="M132.4,37.3c0-5,7.3-5.7,7.3-9.5    c0-1.6-1.2-2.7-3-2.7c-2.1,0-3.2,1.9-3.2,1.9l-1.1-0.7c0,0,1.3-2.6,4.3-2.6c2.7,0,4.3,1.8,4.3,4c0,4.8-7.2,5.5-7.2,9.3h7.4v1.3    h-8.9C132.4,37.9,132.4,37.6,132.4,37.3z" />
+            <path fill="currentColor" d="M144.5,31.1c0-4.1,1.2-7.4,4.9-7.4    s4.9,3.3,4.9,7.4c0,4.1-1.2,7.4-4.9,7.4S144.5,35.3,144.5,31.1z M152.8,31.1c0-3.4-0.8-6-3.4-6c-2.7,0-3.5,2.7-3.5,6    c0,3.4,0.8,6.1,3.5,6.1C152.1,37.2,152.8,34.5,152.8,31.1z" />
+            <path fill="currentColor" d="M157.4,37.3c0-5,7.3-5.7,7.3-9.5    c0-1.6-1.2-2.7-3-2.7c-2.1,0-3.2,1.9-3.2,1.9l-1.1-0.7c0,0,1.3-2.6,4.3-2.6c2.7,0,4.3,1.8,4.3,4c0,4.8-7.2,5.5-7.2,9.3h7.4v1.3    h-8.9C157.4,37.9,157.4,37.6,157.4,37.3z M168.9,37.4c0-5,7.3-5.7,7.3-9.5c0-1.6-1.2-2.7-3-2.7c-2.1,0-3.2,1.9-3.2,1.9l-1.1-0.7    c0,0,1.3-2.6,4.3-2.6c2.7,0,4.3,1.8,4.3,4c0,4.8-7.2,5.5-7.2,9.3h7.4v1.3H169C168.9,38,168.9,37.7,168.9,37.4z" />
+            <path fill="currentColor" d="M185.8,24h4.9c2.6,0,4.4,1.7,4.4,4.3    c0,2.7-1.8,4.4-4.4,4.4h-3.5v5.6h-1.4V24z M190.6,31.4c1.9,0,3.1-1.2,3.1-3.1c0-1.9-1.2-3-3.1-3h-3.4v6.1H190.6z" />
+            <path fill="currentColor" d="M204.8,33.7h-5.7l-1.6,4.5H196l5.2-14.3h1.5    l5.2,14.3h-1.5L204.8,33.7z M201.9,25.5c0,0-0.3,1.2-0.5,1.8l-1.9,5.2h4.9l-1.9-5.2C202.3,26.7,202,25.5,201.9,25.5L201.9,25.5z" />
+            <path fill="currentColor" d="M210.7,24h4.2c1.5,0,2.1,0.1,2.7,0.4    c1.3,0.6,2.2,1.9,2.2,3.7c0,1.9-1.1,3.4-2.7,3.9v0c0,0,0.1,0.2,0.4,0.6l3.1,5.7h-1.6l-3.2-6h-3.6v6h-1.4V24z M215.5,31    c1.7,0,2.8-1.1,2.8-2.9c0-1.2-0.5-2-1.3-2.5c-0.4-0.2-0.9-0.3-2-0.3h-2.9V31H215.5z" />
+            <path fill="currentColor" d="M223.8,24h1.4v14.3h-1.4V24z" />
+            <path fill="currentColor" d="M229.6,35.6c0,0,1.5,1.6,3.7,1.6    c1.6,0,2.8-0.9,2.8-2.5c0-3.6-7.1-2.7-7.1-7.1c0-2,1.8-3.8,4.4-3.8c2.5,0,3.8,1.4,3.8,1.4l-0.7,1.2c0,0-1.3-1.2-3.1-1.2    c-1.8,0-3,1.2-3,2.5c0,3.4,7.1,2.4,7.1,7.1c0,2.1-1.6,3.9-4.3,3.9c-2.9,0-4.5-1.8-4.5-1.8L229.6,35.6z" />
+            <path fill="currentColor" d="M230.5,13.8c0-0.5,0.1-1,0.3-1.5s0.5-0.9,0.8-1.2c0.3-0.3,0.6-0.6,0.8-0.8c0.2-0.2,0.4-0.3,0.5-0.4    c-1.2-0.8-1.8-1.7-1.8-2.9c0-1,0.4-1.9,1.1-2.6c0.8-0.7,1.8-1.1,3.2-1.1c1.3,0,2.4,0.3,3.2,1c0.8,0.7,1.2,1.6,1.2,2.7    c0,0.6-0.1,1.2-0.4,1.9c-0.3,0.6-0.5,1.1-0.8,1.3c-0.2,0.3-0.4,0.5-0.5,0.6c1.4,0.8,2.1,1.8,2.1,3.1c0,1.1-0.4,2.1-1.3,2.9    c-0.9,0.8-2,1.2-3.4,1.2c-1.3,0-2.5-0.4-3.4-1.2C231,16.2,230.5,15.1,230.5,13.8z M238.6,14c0-0.4-0.1-0.7-0.3-1    c-0.2-0.3-0.4-0.5-0.8-0.8c-0.4-0.2-0.7-0.4-1-0.6c-0.3-0.2-0.7-0.4-1.3-0.6c-0.6-0.2-1-0.4-1.3-0.6c-0.2,0.1-0.3,0.2-0.5,0.4    c-0.2,0.2-0.4,0.4-0.7,0.6c-0.3,0.3-0.5,0.6-0.6,1c-0.2,0.4-0.2,0.8-0.2,1.2c0,0.9,0.3,1.7,1,2.2c0.7,0.6,1.5,0.9,2.4,0.9    c0.9,0,1.6-0.3,2.3-0.8C238.3,15.5,238.6,14.8,238.6,14z M232.5,7.1c0,0.3,0.1,0.6,0.2,0.8c0.1,0.3,0.3,0.5,0.4,0.6    c0.2,0.2,0.4,0.4,0.8,0.6c0.4,0.2,0.6,0.4,0.9,0.4c0.2,0.1,0.6,0.2,1,0.4c0.5,0.2,0.8,0.3,1,0.4c0.2-0.1,0.3-0.3,0.5-0.6    c0.2-0.2,0.4-0.6,0.6-1.1c0.2-0.5,0.3-1,0.3-1.5c0-0.8-0.3-1.4-0.8-1.8c-0.5-0.4-1.3-0.7-2.1-0.7c-0.9,0-1.6,0.2-2.1,0.7    C232.8,5.8,232.5,6.4,232.5,7.1z" />
+            <path fill="currentColor" d="M199.4,16.2l0.9-1c0,0,0.1,0.1,0.1,0.2c0.1,0.1,0.2,0.2,0.4,0.4c0.2,0.2,0.4,0.4,0.6,0.5c0.2,0.1,0.5,0.3,0.9,0.4    c0.4,0.1,0.8,0.2,1.2,0.2c1,0,1.8-0.3,2.5-1c0.7-0.6,1-1.4,1-2.4c0-1-0.3-1.8-1-2.4c-0.7-0.6-1.5-1-2.6-1c-0.4,0-0.9,0.1-1.3,0.2    c-0.4,0.1-0.8,0.3-1,0.4l-0.3,0.2l-0.9-0.3l0.8-6.9h6.9V5h-5.7l-0.4,3.7l-0.1,0.8h0c0.6-0.4,1.3-0.5,2.2-0.5    c1.4,0,2.6,0.4,3.5,1.3s1.4,2,1.4,3.3c0,1.3-0.5,2.4-1.4,3.3c-1,0.9-2.1,1.4-3.5,1.4c-0.5,0-1-0.1-1.5-0.2s-0.9-0.3-1.2-0.5    c-0.3-0.2-0.6-0.4-0.8-0.6c-0.2-0.2-0.4-0.4-0.5-0.5L199.4,16.2z" />
+        </g>
+
+        <g id="logoTech">
+            <path fill="currentColor" d="M9.8 52.6H2.4v-5.2h20.7v5.2h-7.4v19.5H9.8V52.6z" />
+            <path fill="currentColor" d="M26.1 47.4h15.2v5.2H32v4.5h7.4v5.2H32V67h9.8v5.2H26.1V47.4z" />
+            <path fill="currentColor" d="M57.2 47c6 0 9.1 3.5 9.1 3.5L63.6 55s-2.7-2.5-6.1-2.5c-4.7 0-6.9 3.5-6.9 7 0 3.7 2.4 7.4 6.9 7.4 3.7 0 6.5-3 6.5-3l3.1 4.4s-3.4 4.1-9.8 4.1c-7.6 0-12.7-5.5-12.7-12.8-.1-7.1 5.3-12.6 12.6-12.6z" />
+            <path fill="currentColor" d="M70.6 47.4h5.9v9.9h8.8v-9.9h5.9v24.7h-5.9v-9.7h-8.8v9.7h-5.9V47.4z" />
+            <path fill="currentColor" d="M97.1 47.4h6l6.7 11.5c1 1.6 2 4.2 2 4.2h.1s-.3-2.7-.3-4.2V47.4h5.9v24.7h-6l-6.8-11.5c-1-1.6-2-4.2-2-4.2h-.1s.3 2.7.3 4.2v11.5H97V47.4z" />
+            <path fill="currentColor" d="M134.4 47c7.3 0 12.7 5.5 12.7 12.6 0 7.3-5.4 12.9-12.7 12.9-7.3 0-12.7-5.7-12.7-12.9-.1-7.1 5.3-12.6 12.7-12.6zm0 20c3.6 0 6.6-3.2 6.6-7.4 0-4-2.9-7.1-6.6-7.1-3.6 0-6.6 3-6.6 7.1 0 4.2 2.9 7.4 6.6 7.4z" />
+            <path fill="currentColor" d="M151.1 47.4h5.9v19.5h9.9v5.2H151V47.4z" />
+            <path fill="currentColor" d="M181.1 47c7.3 0 12.7 5.5 12.7 12.6 0 7.3-5.4 12.9-12.7 12.9-7.3 0-12.7-5.7-12.7-12.9 0-7.1 5.4-12.6 12.7-12.6zm0 20c3.6 0 6.6-3.2 6.6-7.4 0-4-2.9-7.1-6.6-7.1-3.6 0-6.6 3-6.6 7.1.1 4.2 3 7.4 6.6 7.4z" />
+            <path fill="currentColor" d="M209 47c6.2 0 9.3 3.3 9.3 3.3l-2.9 4.5s-2.5-2.3-5.9-2.3c-5.1 0-7.2 3.3-7.2 7 0 4.7 3.2 7.5 7 7.5 2.9 0 4.9-1.8 4.9-1.8v-1.9h-3.4v-5.1h8.7v14h-5v-.7-1h-.1s-2.3 2.1-6.4 2.1c-6.2 0-11.9-4.7-11.9-12.8.2-7.3 5.5-12.8 12.9-12.8z" />
+            <path fill="currentColor" d="M229 62l-8-14.6h6.8l2.8 5.9c.8 1.7 1.5 3.6 1.5 3.6h.1s.7-1.9 1.5-3.6l2.7-5.9h6.8l-8 14.6v10.1H229V62z" />
+        </g>
+    </g>
+
+</svg>

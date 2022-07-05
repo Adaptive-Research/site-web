@@ -1,0 +1,1 @@
+function loadRecaptchaAsynchronously(){var head=document.querySelector("head"),script=document.createElement("script");script.type="text/javascript";script.charset="utf-8";script.src="/wp-content/plugins/wbounce-override/assets/js/wbounce-active-campaign-recaptcha.js";head.appendChild(script)}
