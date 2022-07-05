@@ -1,285 +1,52 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
+-- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
+--
+-- Host: localhost    Database: SEO
+-- ------------------------------------------------------
+-- Server version	8.0.29-0ubuntu0.20.04.3
 
-
-
-use SEO ;
-
-
-DROP TABLE IF EXISTS Profession ;
-CREATE TABLE `Profession` (
-  `id` int NOT NULL,
-  `Profession` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
-  iscurrent int  default 1
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
-
-ALTER TABLE `Profession`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `Profession`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
-
-INSERT INTO `Profession` (`id`, `Profession`) VALUES
-(1, 'agent immobilier'),
-(2, 'agence digitale'),
-(3, 'agence marketing'),
-(4, 'agence communication'),
-(5, 'agence seo'),
-(6, 'avocat'),
-(7, 'cuisiniste'),
-(8, 'expert comptable'),
-(9, 'graphiste'),
-(10, 'coach sportif'),
-(11, 'coach de vie'),
-(12, 'maçon'),
-(13, 'menuisier'),
-(14, 'paysagiste'),
-(15, 'pizzeria'),
-(16, 'plombier'),
-(17, 'architecte'),
-(18, 'architecte d\'intérieur'),
-(19, 'restaurant'),
-(20, 'agent général d\'assurance'),
-(21, 'agence d\'assurance'),
-(22, 'agence d\'immobilier d\'entreprise'),
-(23, 'agence d\'intérim'),
-(24, 'agence de location de maisons de vacances'),
-(25, 'agence de location de matériel'),
-(26, 'agence de marketing'),
-(27, 'agence de publicité'),
-(28, 'agence de relations publiques'),
-(29, 'agence de services d\'aide à domicile'),
-(30, 'agence de voyages'),
-(31, 'agence immobilière'),
-(32, 'agence pour l\'emploi'),
-(33, 'artiste'),
-(34, 'association ou organisation'),
-(35, 'atelier de menuiserie'),
-(36, 'atelier de métallerie'),
-(37, 'auto-école'),
-(38, 'banque'),
-(39, 'barbecue'),
-(40, 'cabinet d\'expertise comptable'),
-(41, 'centre d\'amincissement'),
-(42, 'centre de coaching'),
-(43, 'centre de formation continue'),
-(44, 'charpentier'),
-(45, 'chaudronnerie'),
-(46, 'chinoise'),
-(47, 'coach particulier'),
-(48, 'coaching professionnel'),
-(49, 'commercial agent'),
-(50, 'comptable'),
-(51, 'concepteur de sites web'),
-(52, 'conseil'),
-(53, 'conseiller en gestion des affaires'),
-(54, 'conseiller financier'),
-(55, 'constructeur de maisons personnalisées'),
-(56, 'constructeur immobilier'),
-(57, 'consultant en informatique'),
-(58, 'consultant en ingénierie'),
-(59, 'consultant en marketing'),
-(60, 'consultant immobilier'),
-(61, 'courtier en prêts hypothécaires'),
-(62, 'couvreur'),
-(63, 'entrepreneur'),
-(64, 'entrepreneur spécialisé dans l\'isolation'),
-(65, 'entreprise de construction'),
-(66, 'expert-comptable'),
-(67, 'fabricant'),
-(68, 'fabricant de meubles'),
-(69, 'fenêtre en aluminium'),
-(70, 'fondation'),
-(71, 'forgeron'),
-(72, 'fournisseur d\'accès internet'),
-(73, 'fournisseur de fenêtres'),
-(74, 'fournisseur de matériaux de construction'),
-(75, 'fournisseur de systèmes de sécurité'),
-(76, 'gare'),
-(77, 'grossiste'),
-(78, 'halal'),
-(79, 'hamburger'),
-(80, 'hôtel de ville'),
-(81, 'institut de beauté'),
-(82, 'magasin'),
-(83, 'magasin d\'alimentation bio'),
-(84, 'magasin d\'antiquités'),
-(85, 'magasin de bois de chauffage'),
-(86, 'magasin de bricolage'),
-(87, 'magasin de fenêtres en pvc'),
-(88, 'magasin de matériel électrique'),
-(89, 'magasin de meubles'),
-(90, 'magasin de meubles de cuisine'),
-(91, 'magasin de vêtements'),
-(92, 'musée d\'art'),
-(93, 'mutuelle de santé'),
-(94, 'négociant en bois'),
-(95, 'office de tourisme'),
-(96, 'peintre en bâtiment'),
-(97, 'pizza'),
-(98, 'programme de bien-être'),
-(99, 'publicité'),
-(100, 'restaurant de grillades à la française'),
-(101, 'restauration rapide'),
-(102, 'salle de gym'),
-(103, 'serrurier'),
-(104, 'service d\'hypnothérapie'),
-(105, 'service d\'élagage'),
-(106, 'service de marketing internet'),
-(107, 'service de pose de parquet'),
-(108, 'service de restauration de meubles anciens'),
-(109, 'service de serrurerie d\'urgence'),
-(110, 'siège social'),
-(111, 'société de crédit foncier'),
-(112, 'société immobilière'),
-(113, 'soudeur'),
-(114, 'sushis'),
-(115, 'tapissier décorateur'),
-(116, 'turque'),
-(117, 'vitrier');
-
-INSERT INTO `Profession` ( `Profession`) VALUES
-("naturopathe"),
-("kinesitherapeute"),
-("médecin"),
-("osthéopathe"),
-("pharmacien"),
-("dentiste") ;
-
-INSERT INTO `Profession` ( `Profession`) VALUES
-("ophtalmologiste") ;
-
-
-
-
--- Cette table garde une trace de toutes les lancements de jobs pour récupérer les informations google pour un secteur d'activité donné
-
-use SEO ;
-
-drop table if EXISTS `Profession_Run` ;
-CREATE TABLE `Profession_Run` (
-  id int NOT NULL,
-  idProfession int DEFAULT NULL,
-  Ville varchar(50) DEFAULT NULL,
-  CodePostal varchar(8) DEFAULT NULL,
-  HasBeenParsed int DEFAULT 0,
-  DateRun timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
-ALTER TABLE `Profession_Run`
-  ADD PRIMARY KEY (`id`);
+-- Table structure for table `Profession`
+--
 
-ALTER TABLE `Profession_Run`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+DROP TABLE IF EXISTS `Profession`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `Profession` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `Profession` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `iscurrent` int DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=719 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
+--
+-- Dumping data for table `Profession`
+--
 
+LOCK TABLES `Profession` WRITE;
+/*!40000 ALTER TABLE `Profession` DISABLE KEYS */;
+INSERT INTO `Profession` VALUES (1,'agent immobilier',1),(2,'agence digitale',0),(3,'agence marketing',1),(4,'agence communication',1),(5,'agence seo',1),(6,'avocat',1),(7,'cuisiniste',1),(8,'expert comptable',1),(9,'graphiste',1),(10,'coach sportif',1),(11,'coach de vie',1),(12,'maçon',1),(13,'menuisier',1),(14,'paysagiste',1),(15,'pizzeria',1),(16,'plombier',1),(17,'architecte',1),(18,'architecte d\'intérieur',1),(19,'restaurant',1),(20,'agent général d\'assurance',1),(21,'agence d\'assurance',1),(22,'agence d\'immobilier d\'entreprise',1),(23,'agence d\'intérim',1),(24,'agence de location de maisons de vacances',1),(25,'agence de location de matériel',1),(26,'agence de marketing',1),(27,'agence de publicité',1),(28,'agence de relations publiques',1),(29,'agence de services d\'aide à domicile',1),(30,'agence de voyages',1),(31,'agence immobilière',1),(32,'agence pour l\'emploi',1),(33,'artiste',1),(34,'association ou organisation',0),(35,'atelier de menuiserie',1),(36,'atelier de métallerie',1),(37,'auto-école',1),(38,'banque',1),(39,'barbecue',1),(40,'cabinet d\'expertise comptable',1),(41,'centre d\'amincissement',1),(42,'centre de coaching',1),(43,'centre de formation continue',0),(44,'charpentier',1),(45,'chaudronnerie',1),(46,'chinoise',1),(47,'coach particulier',1),(48,'coaching professionnel',1),(49,'commercial agent',1),(50,'comptable',1),(51,'concepteur de sites web',1),(52,'conseil',0),(53,'conseiller en gestion des affaires',1),(54,'conseiller financier',1),(55,'constructeur de maisons personnalisées',1),(56,'constructeur immobilier',1),(57,'consultant en informatique',1),(58,'consultant en ingénierie',1),(59,'consultant en marketing',1),(60,'consultant immobilier',1),(61,'courtier en prêts hypothécaires',1),(62,'couvreur',1),(63,'entrepreneur',1),(64,'entrepreneur spécialisé dans l\'isolation',1),(65,'entreprise de construction',1),(66,'expert-comptable',0),(67,'fabricant',1),(68,'fabricant de meubles',1),(69,'fenêtre en aluminium',1),(70,'fondation',1),(71,'forgeron',1),(72,'fournisseur d\'accès internet',1),(73,'fournisseur de fenêtres',1),(74,'fournisseur de matériaux de construction',1),(75,'fournisseur de systèmes de sécurité',1),(76,'gare',0),(77,'grossiste',1),(78,'halal',1),(79,'hamburger',0),(80,'hôtel de ville',1),(81,'institut de beauté',1),(82,'magasin',0),(83,'magasin d\'alimentation bio',1),(84,'magasin d\'antiquités',1),(85,'magasin de bois de chauffage',1),(86,'magasin de bricolage',1),(87,'magasin de fenêtres en pvc',1),(88,'magasin de matériel électrique',1),(89,'magasin de meubles',1),(90,'magasin de meubles de cuisine',1),(91,'magasin de vêtements',1),(92,'musée d\'art',1),(93,'mutuelle de santé',1),(94,'négociant en bois',1),(95,'office de tourisme',0),(96,'peintre en bâtiment',1),(97,'pizza',0),(98,'programme de bien-être',1),(99,'publicité',1),(100,'restaurant de grillades à la française',0),(101,'restauration rapide',1),(102,'salle de gym',1),(103,'serrurier',1),(104,'service d\'hypnothérapie',1),(105,'service d\'élagage',1),(106,'service de marketing internet',1),(107,'service de pose de parquet',1),(108,'service de restauration de meubles anciens',1),(109,'service de serrurerie d\'urgence',1),(110,'siège social',0),(111,'société de crédit foncier',1),(112,'société immobilière',1),(113,'soudeur',1),(114,'sushis',1),(115,'tapissier décorateur',1),(116,'turque',1),(117,'vitrier',1),(118,'naturopathe',1),(119,'kinesitherapeute',0),(120,'médecin',1),(121,'osthéopathe',1),(122,'pharmacien',0),(123,'dentiste',1),(124,'ophtalmologiste',1),(125,'administration locale',1),(126,'agence de location de camping-cars',1),(127,'agence de recrutement',1),(128,'association caritative',1),(129,'association pour la jeunesse',1),(130,'atelier de réparation automobile',1),(131,'attaché de presse',1),(132,'bar',1),(133,'carrière',1),(134,'centre de paintball',1),(135,'cinéma',1),(136,'garage automobile',1),(137,'hypermarché',1),(138,'magasin d\'alimentation',1),(139,'magasin de produits surgelés',1),(140,'maison de retraite',1),(141,'microbrasserie',1),(142,'notaire',1),(143,'opticien',1),(144,'photographe',1),(145,'poste',0),(146,'prestataire spécialisé dans les vitres teintées',1),(147,'restaurant français',1),(148,'service de nettoyage',1),(149,'société de production vidéo',1),(150,'studio de photographie',1),(151,'supermarché',1),(152,'supermarché discount',1),(153,'église catholique',0),(154,'centre de formation',1),(155,'administration départementale',1),(156,'administration publique régionale',1),(157,'association bénévole',1),(158,'bibliothèque municipale',0),(159,'bijouterie',1),(160,'boutique de cigarettes électroniques',1),(161,'cave à vins',1),(162,'centre culturel',0),(163,'centre social',0),(164,'chauffagiste',1),(165,'collège',0),(166,'concessionnaire dacia',0),(167,'concessionnaire de motos',1),(168,'fleuriste',1),(169,'gynécologue-obstétricien',1),(170,'huissier',1),(171,'hôpital',1),(172,'jardinerie',1),(173,'laboratoire d\'analyse médicale',1),(174,'magasin d\'alimentation animale',1),(175,'magasin de chaussures',1),(176,'magasin de pièces automobiles',1),(177,'magasin de vêtements de sport',1),(178,'mairie de village',1),(179,'médecin généraliste',1),(180,'ostéopathe',0),(181,'palais de justice',1),(182,'parti politique',0),(183,'pharmacie',1),(184,'praticien de médecine alternative',1),(185,'quincaillerie',1),(186,'sage-femme',1),(187,'salle de réception',1),(188,'salon de coiffure',1),(189,'service de collecte d\'ordures ménagères',1),(190,'service de la santé au travail',1),(191,'service de réparation d\'ordinateurs',1),(192,'vétérinaire',1),(193,'vêtements pour enfants',1),(194,'agence artistique',1),(195,'agence de location de voitures',1),(196,'agence de visites touristiques',1),(197,'association artistique',1),(198,'association culturelle',0),(199,'atelier d\'art',1),(200,'atelier d\'artiste',1),(201,'atelier de vitraux',1),(202,'bar-tabac',1),(203,'boucherie',1),(204,'centre d\'art',1),(205,'centre de loisirs',1),(206,'centre de rééducation',1),(207,'centre équestre',1),(208,'cimetière',0),(209,'club de danse',1),(210,'club de sport',1),(211,'club de tennis',1),(212,'compagnie de théâtre',1),(213,'constructeur de structures en béton',1),(214,'cordonnier',1),(215,'cours de peinture',1),(216,'décorateur d\'intérieur',1),(217,'entrepreneur spécialisé dans la décoration d\'intérieur',1),(218,'fonderie',1),(219,'fournisseur de cadres en bois',1),(220,'française',0),(221,'galerie d\'art',1),(222,'gîte',1),(223,'imprimerie commerciale',1),(224,'imprimeur numérique',1),(225,'label de musique',1),(226,'magasin d\'encadrement',1),(227,'magicien',1),(228,'make-up artist',1),(229,'marchand d\'art',1),(230,'marché de vente en gros de vêtements',1),(231,'musée',1),(232,'musée archéologique',1),(233,'oto-rhino-laryngologiste',1),(234,'psychologue',1),(235,'relieur',1),(236,'résidence',0),(237,'salle de spectacles',1),(238,'salon de manucure',1),(239,'salon de thé',1),(240,'sculpteur',1),(241,'société d\'animation artistique',1),(242,'souffleur de verre',1),(243,'tableau',0),(244,'tatoueur',1),(245,'école',0),(246,'établissement d\'enseignement secondaire',0),(247,'courtier d\'assurances',1),(248,'service de conseil en crédit',1),(249,'établissement de crédit',1),(250,'cabinet infirmier',1),(251,'club de tir à l\'arc',1),(252,'internat',0),(253,'mosquée',0),(254,'épicerie',1),(255,'chiropracteur',1),(256,'kinésithérapeute',1),(257,'maison de santé',1),(258,'orthophoniste',1),(259,'podologue',1),(260,'santé',0),(261,'atelier de carrosserie automobile',1),(262,'atelier de mécanique automobile',1),(263,'atelier de réparation pour poids lourds',1),(264,'centre de contrôle technique',1),(265,'concessionnaire automobile',1),(266,'concessionnaire de véhicules à moteur',1),(267,'courtier automobile',1),(268,'magasin de carrelage',1),(269,'magasin de matériel de motoculture',1),(270,'magasin de pièces auto d\'occasion',1),(271,'magasin de pièces de rechange automobiles',1),(272,'magasin de pneus',1),(273,'mécanicien',1),(274,'préparateur automobile',1),(275,'service de remise à neuf des moteurs',1),(276,'service de restauration d\'automobiles',1),(277,'service de réparation de pare-brise',1),(278,'station de lavage automobile',1),(279,'station-service',1),(280,'usine automobile',1),(281,'vendeur de voitures d\'occasion',1),(282,'agence d\'excursions en bateau',1),(283,'agence de location d\'hélicoptères',1),(284,'agence de visites touristiques en bus',1),(285,'agence de visites touristiques en canoë-kayak',1),(286,'agence de vols touristiques en montgolfière',1),(287,'agence événementielle',1),(288,'attraction touristique',1),(289,'centre d\'information',1),(290,'hôtel',1),(291,'moulin à eau',1),(292,'service d\'organisation d\'événements professionnels',1),(293,'acheteur de diamants',1),(294,'bazar',1),(295,'café',1),(296,'caviste',1),(297,'chocolatier',1),(298,'distributeur de papier',1),(299,'entreprise de matériel de manutention',1),(300,'entrepôt',1),(301,'fabricant de vêtements de sport',1),(302,'fleuriste grossiste',1),(303,'fournisseur de bières',1),(304,'fournisseur de composants électroniques',1),(305,'fournisseur de machines à café',1),(306,'fournisseur de matériel de bureau',1),(307,'fournisseur de matériel de laboratoire',1),(308,'fournisseur de matériel médical et chirurgical',1),(309,'fournisseur de pierre naturelle',1),(310,'fournisseur de produits alimentaires',1),(311,'fournisseur de produits de beauté',1),(312,'grossiste en boulangerie',1),(313,'grossiste en fruits',1),(314,'grossiste en vins',1),(315,'jardin',1),(316,'magasin d\'ameublement et de décoration',1),(317,'magasin d\'appareils auditifs',1),(318,'magasin d\'outillage',1),(319,'magasin d\'électronique',1),(320,'magasin de cosmétiques',1),(321,'magasin de gâteaux',1),(322,'magasin de matériel médical',1),(323,'magasin de produits de beauté',1),(324,'magasin de produits de la ferme',1),(325,'magasin de vitamines et compléments alimentaires',1),(326,'marché de produits frais',1),(327,'office public du logement',0),(328,'pépinière',1),(329,'société d\'import-export',1),(330,'sports accessories wholesaler',1),(331,'traiteur',1),(332,'usine chimique',1),(333,'vendeur en gros',1),(334,'vente de légumes en gros',1),(335,'vignoble',1),(336,'épicier en gros',1),(337,'équipement pour boulangerie',1),(338,'agence de location de poids lourds',1),(339,'agence de location immobilière',1),(340,'artisanat',1),(341,'boulangerie',1),(342,'boutique d\'accessoires de mode',1),(343,'boutique d\'articles de mariage',1),(344,'boutique de sacs à main',1),(345,'entretien d\'antennes',1),(346,'fabricant de voiles',1),(347,'fournisseur d\'équipements de chauffage',1),(348,'fournisseur d\'équipements de télécommunications',1),(349,'fournisseur d\'équipements industriels',1),(350,'fournisseur d\'équipements pour l\'adoucissement de l\'eau',1),(351,'importateur',1),(352,'magasin d\'articles de sports',1),(353,'magasin de disques',1),(354,'magasin de fournitures de bureau',1),(355,'magasin de jouets',1),(356,'magasin de location de chaînes hi-fi',1),(357,'magasin de matériel d\'équitation',1),(358,'magasin de matériel de cuisine',1),(359,'magasin de matériel de plomberie',1),(360,'magasin de matériel de surveillance',1),(361,'magasin de matériel pour piscines',1),(362,'magasin de vêtements pour femmes',1),(363,'magasin de vêtements pour hommes',1),(364,'musicien',1),(365,'parfumerie',1),(366,'pâtisseries',0),(367,'service d\'installation électrique',1),(368,'service de location d\'outils',1),(369,'service de soins à domicile',1),(370,'solutions et équipement énergétiques',1),(371,'supérette',1),(372,'concessionnaire toyota',0),(373,'syndicat de copropriétaires',1),(374,'trésor public',0),(375,'vente aux enchères de voitures',1),(376,'administration',1),(377,'centre commercial',1),(378,'conseil en investissement',1),(379,'conseiller fiscal',1),(380,'consultant',1),(381,'consultant en ressources humaines',1),(382,'entreprise de confection',1),(383,'entrepôt frigorifique',1),(384,'fournisseur de portes',1),(385,'institution financière',1),(386,'service logistique',1),(387,'vitrerie - miroiterie',1),(388,'électricien',1),(389,'bar pmu',1),(390,'billetterie de spectacles',1),(391,'cabinet médical',1),(392,'centre aquatique',1),(393,'centre de bien-être',1),(394,'centre de colonie de vacances',1),(395,'centre de fitness',1),(396,'centre de laser game',1),(397,'club de kung-fu',1),(398,'club de taekwondo',1),(399,'disc-jockey',1),(400,'institut de spa et bien-être',1),(401,'massothérapeute',1),(402,'organisateur d\'événements',1),(403,'parc aquatique',1),(404,'parc d\'activités',1),(405,'parc de loisirs',1),(406,'perinatal center',1),(407,'piscine municipale',1),(408,'port de plaisance',0),(409,'réflexologue',1),(410,'service de location de canoës-kayaks',1),(411,'service de location de vélo',1),(412,'service de taxi',1),(413,'stand de tir',1),(414,'école de danse',1),(415,'éleveur de chiens',1),(416,'atelier de couture',1),(417,'atelier de réparation d\'instruments de musique',1),(418,'boutique de mariage',1),(419,'cours de dessin',1),(420,'esthéticien/esthéticienne',1),(421,'institut de recherche',1),(422,'magasin de matériel artistique',1),(423,'magasin de vélos',1),(424,'metalware producer',1),(425,'école d\'art',1),(426,'fournisseur de systèmes de climatisation',1),(427,'géomètre',1),(428,'poste électrique',1),(429,'service d\'assainissement',1),(430,'service d\'entretien et de réparation de fosses septiques',1),(431,'cardiologue',1),(432,'dermatologue',1),(433,'pédiatre',1),(434,'arrêt de bus',0),(435,'boucherie-charcuterie',1),(436,'boutique de cadeaux',1),(437,'boutique de lingerie',1),(438,'boutique de santé et beauté',1),(439,'fournisseur de canalisations',1),(440,'imprimeur',1),(441,'laboratoire photo',1),(442,'librairie',1),(443,'magasin d\'articles d\'aménagement aquatique du jardin',1),(444,'magasin d\'informatique',1),(445,'magasin de nouveautés',1),(446,'magasin de thé',1),(447,'magasin de vins et spiritueux',1),(448,'pressing',1),(449,'services d\'expédition et de livraison',1),(450,'thérapeute reiki',1),(451,'vendeur de pièces de monnaie de collection',1),(452,'épicerie fine',1),(453,'fournisseur de portes de garage',1),(454,'magasin de stores et de rideaux',1),(455,'police d\'état',0),(456,'service de transport',1),(457,'complexe sportif',0),(458,'entrepreneur spécialisé dans les revêtements de sol',1),(459,'fabricant de poteries',1),(460,'magasin bio',1),(461,'magasin de linge de maison',1),(462,'magasin de materiaux de construction',1),(463,'spécialiste de la salle de bains',1),(464,'travaux généraux',1),(465,'université',0),(466,'école de musique',1),(467,'école maternelle',0),(468,'école primaire',0),(469,'école privée',0),(470,'boutique de desserts',1),(471,'grand magasin',1),(472,'pâtisserie',1),(473,'pâtissier spécialisé dans les gâteaux de mariage',1),(474,'agence de location d\'appartements',1),(475,'boutique de produits diététiques',1),(476,'herboristerie',1),(477,'magasin d\'alimentation naturelle',1),(478,'magasin d\'aromathérapie',1),(479,'magasin d\'articles d\'emballage',1),(480,'magasin de cannabis',1),(481,'minibus taxi service',1),(482,'service ambulancier',1),(483,'service de chauffeur particulier',1),(484,'service de conteneurs',1),(485,'service de transport et d\'accompagnement',1),(486,'société de transport routier',1),(487,'station de taxis',1),(488,'afghane',0),(489,'borne de recharge de véhicules électriques',1),(490,'brasserie',1),(491,'fromagerie',1),(492,'marocaine',0),(493,'minoterie',1),(494,'nutritionniste',1),(495,'sandwich',0),(496,'sushi à emporter',1),(497,'musician',0),(498,'aide à domicile',1),(499,'animalerie',1),(500,'assistance et services informatiques',1),(501,'astrologue',1),(502,'bureau de tabac',1),(503,'confiserie',1),(504,'cours de cuisine',1),(505,'entreprise de logiciels',1),(506,'fournisseur de matériel audiovisuel',1),(507,'horlogerie',1),(508,'infirmier praticien',1),(509,'librairie chrétienne',1),(510,'magasin d\'électroménager',1),(511,'magasin de peinture',1),(512,'magasin de tapis d\'orient',1),(513,'service de réparation d\'appareils électroménagers',1),(514,'cabine photographique',1),(515,'centre de recyclage',1),(516,'magasin d\'instruments de musique',1),(517,'magasin de guitares',1),(518,'magasin de musique',1),(519,'magasin de partitions de musique',1),(520,'magasin de photo',1),(521,'poste de secours',1),(522,'prestataire fournissant des services de dactylographie',1),(523,'service d\'e-commerce',1),(524,'société de travaux publics',1),(525,'studio d\'enregistrement',1),(526,'agence d\'architecture',1),(527,'cabinet d\'architecte d\'intérieur',1),(528,'établissement d\'enseignement',0),(529,'agriculteur',1),(530,'boutique de produits de nutrition sportive',1),(531,'compagnie de danse',1),(532,'conservatoire',1),(533,'cours de poterie',1),(534,'cours de yoga',1),(535,'enseignement supérieur',1),(536,'ferme',1),(537,'ferme bio',1),(538,'groupement agricole d\'exploitation en commun',1),(539,'herboriste',1),(540,'magasins d\'appareil de fitness',1),(541,'maraîcher',1),(542,'marché alimentaire',1),(543,'marché fermier',1),(544,'primeur',1),(545,'producteur agroalimentaire',1),(546,'professeur de danse de salon',1),(547,'professeur de guitare',1),(548,'professeur de musique',1),(549,'professeur de piano',1),(550,'salle de danse',1),(551,'école d\'art dramatique',1),(552,'école d\'arts martiaux',1),(553,'école d\'aïkido',1),(554,'école publique',0),(555,'élevage de volailles',1),(556,'éleveur',1),(557,'établissement d\'enseignement supérieur',1),(558,'atelier de réparation de scooters',1),(559,'atelier de réparation de tracteurs',1),(560,'atelier de réparation pour motos',1),(561,'concessionnaire ford',1),(562,'concessionnaire peugeot',1),(563,'concessionnaire renault',1),(564,'concessionnaire volkswagen',1),(565,'concessionnaire de poids lourds d\'occasion',1),(566,'entrepreneur spécialisé dans les systèmes d\'arrosage de pelouse',1),(567,'institut de soins du visage',1),(568,'magasin de réparation de vélos',1),(569,'prestataire spécialisé dans le garnissage automobile',1),(570,'service de remorquage',1),(571,'services de nettoyage',1),(572,'société de construction de piscine',1),(573,'administration gouvernementale',1),(574,'agence de presse',1),(575,'aire de repos',1),(576,'architecte paysagiste',1),(577,'arrêt de transports en commun',0),(578,'association pour la protection des animaux',1),(579,'atelier d\'usinage',1),(580,'atelier de réparation d\'appareils photo',1),(581,'atelier de réparation de téléphones mobiles',1),(582,'band',0),(583,'boutique d\'articles de mode',1),(584,'boutique de robes',1),(585,'boutique de t-shirts personnalisés',1),(586,'cabinet d\'avocats',1),(587,'cantine scolaire',0),(588,'caserne de pompiers',0),(589,'centre d\'accueil pour sans-abris',0),(590,'centre d\'aide sociale',1),(591,'centre d\'emploi',1),(592,'centre d\'imagerie pour diagnostic médical',1),(593,'centre d\'information et d\'orientation',1),(594,'centre de radiologie',1),(595,'centre de soins prénatals',1),(596,'centre de yoga',1),(597,'centre médical',1),(598,'chambre d\'hôtes',1),(599,'clinique',1),(600,'club',1),(601,'club d\'équitation',1),(602,'club de boxe',1),(603,'club de canoë-kayak',1),(604,'club de football',1),(605,'club de gymnastique',1),(606,'club de randonnée',1),(607,'club de rugby',1),(608,'club de ski',1),(609,'compagnie des eaux',1),(610,'concessionnaire de scooters',1),(611,'conseiller',1),(612,'conseiller familial',1),(613,'conseiller santé',1),(614,'constructeur de garages',1),(615,'consultant en feng shui',1),(616,'consultant en acoustique',1),(617,'consultant en construction',1),(618,'consultant en pension de retraite',1),(619,'coopérative agricole',1),(620,'cuisine traditionnelle',1),(621,'distributeur d\'acier',1),(622,'distributeur d\'appareils électroniques',1),(623,'entrepreneur spécialisé dans la démolition',1),(624,'entreprise de bricolage',1),(625,'entreprise de packaging',1),(626,'environnement et ressources naturelles renouvelables',1),(627,'fabricant d\'outils',1),(628,'fabricant de machines',1),(629,'fabricant de matériel électronique',1),(630,'fabricant de pièces de machinerie',1),(631,'fabricant de produits en céramique',1),(632,'façadier',1),(633,'ferme d\'élevage',1),(634,'fire department equipment supplier',1),(635,'fournisseur d\'aluminium',1),(636,'fournisseur d\'électricité',1),(637,'fournisseur de matériel agricole',1),(638,'fournisseur de produits de nettoyage',1),(639,'friperie',1),(640,'grossiste en verrerie',1),(641,'hébergement',1),(642,'hôpital gouvernemental',0),(643,'hôtel bien-être',1),(644,'immeuble en copropriété',0),(645,'imprimeur d\'étiquettes personnalisées',1),(646,'industrie cosmétique',1),(647,'industrie du verre',1),(648,'ingénieur',1),(649,'ingénieur structures',1),(650,'ingénieur électricien',1),(651,'institut de massages',1),(652,'laser equipment supplier',1),(653,'laverie automatique',1),(654,'lieu de culte',0),(655,'location de quad',1),(656,'luthier',1),(657,'magasin d\'articles d\'occasion',1),(658,'magasin d\'articles de salle de bains',1),(659,'magasin d\'instruments de musique d\'occasion',1),(660,'magasin de boîtes à musique',1),(661,'magasin de gros',1),(662,'magasin de matériel de maçonnerie',1),(663,'magasin de matériel pour dj',1),(664,'magasin de matériel pour le travail du bois',1),(665,'magasin de motos',1),(666,'magasin de pianos',1),(667,'magasin de pièces et d\'accessoires pour motos',1),(668,'magasin de poteries',1),(669,'magasin de produits d\'occasion',1),(670,'magasin de surplus militaire',1),(671,'magasin de vêtements vintage',1),(672,'marchand de journaux',1),(673,'market operator',1),(674,'monastère',1),(675,'musée du patrimoine',1),(676,'médium',1),(677,'organisateur de mariages',1),(678,'organisation féminine',1),(679,'organisation religieuse',0),(680,'organisme des services sociaux',1),(681,'organisme à but non lucratif',1),(682,'orthodontiste',1),(683,'parc',1),(684,'photographe aérien',1),(685,'photographe de mariage',1),(686,'poste de police',1),(687,'producteur de ferronnerie industrielle',1),(688,'programme d\'entraînement physique',1),(689,'psychothérapeute',1),(690,'radiologue',1),(691,'réparateur et accordeur de piano',1),(692,'salle de concert',1),(693,'salon de piercing',1),(694,'salon de tatouage et piercing',1),(695,'sellerie-bourrellerie',1),(696,'service d\'affûtage de scies',1),(697,'service d\'aide à la recherche d\'emploi',1),(698,'service d\'extermination des nuisibles',1),(699,'service de distribution',1),(700,'service de décoration florale',1),(701,'service de gestion des déchets',1),(702,'service de location d\'instruments de musique',1),(703,'service de location de bateaux',1),(704,'service de santé mentale',1),(705,'services aux entreprises',1),(706,'services de voyance',1),(707,'société d\'investissement',1),(708,'société de vente aux enchères',1),(709,'station de vélos en libre-service',1),(710,'studio pilates',1),(711,'syndicat',1),(712,'toiletteur',1),(713,'troupe d\'arts scéniques',1),(714,'vélodrome',1),(715,'école de cuisine',1),(716,'école de sports',1),(717,'église',0),(718,'église évangélique',0);
+/*!40000 ALTER TABLE `Profession` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
-
-
-
-
--- on recupere les infos google et on remplit
--- Titre,
--- Ligne,
--- TypeEntreprise
--- Telephone
--- URL
-
-
-
-drop table if EXISTS `Profession_Entreprises` ;
-CREATE TABLE `Profession_Entreprises` (
-  id int NOT NULL,
-
-  Titre varchar(200) DEFAULT NULL,
-  TypeEntreprise varchar(100) DEFAULT NULL,
-  
-  Telephone varchar(15) DEFAULT NULL,
-
-  NumeroVoie  varchar(4) DEFAULT NULL,
-  TypeVoie varchar(4)  DEFAULT NULL,
-  LibelleVoie varchar(100) DEFAULT NULL,
-  CodePostal varchar(5)  DEFAULT NULL,
-  LibelleCommune varchar(100)  DEFAULT NULL,
-  
-  URL  varchar(500) DEFAULT NULL,
-
-
-  VilleMinu varchar(50) DEFAULT NULL, -- la ville est deduite de Ligne et de la ville de recherche et on la passe en minuscule
-  VilleHasBeenSearched int DEFAULT 0
-
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
-
-
-
-
-ALTER TABLE `Profession_Entreprises`
-  ADD PRIMARY KEY (`id`);
-
-
-ALTER TABLE `Profession_Entreprises`
-  ADD KEY (`Titre`);
-
-
-ALTER TABLE `Profession_Entreprises`
-  ADD KEY (`TypeEntreprise`);
-
-
-
-ALTER TABLE `Profession_Entreprises`
-  ADD KEY (`Telephone`);
-
-
-
-ALTER TABLE `Profession_Entreprises`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
-
-
-
-
-
-drop table if EXISTS `Profession_Entreprises_ResultsRuns` ;
-CREATE TABLE `Profession_Entreprises_ResultsRuns` (
-
-id int NOT NULL,
-idProfessionRun int DEFAULT NULL,
-
-Ligne varchar(100) DEFAULT NULL,
-
-Ranking int default NULL,
-
-NombreAvis int default 0,
-Rating float default 0,
-
-idEntreprise int NOT NULL
-
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
-
-ALTER TABLE `Profession_Entreprises_ResultsRuns`
-  ADD PRIMARY KEY (`id`);
-
-
-ALTER TABLE `Profession_Entreprises_ResultsRuns`
-  ADD KEY (`idEntreprise`);
-
-
-ALTER TABLE `Profession_Entreprises_ResultsRuns`
-  ADD KEY (`idProfessionRun`);
-
-
-ALTER TABLE `Profession_Entreprises_ResultsRuns`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
-
-
-
-
+-- Dump completed on 2022-07-02 15:48:32
