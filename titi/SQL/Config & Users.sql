@@ -163,20 +163,8 @@ insert into pages_visibleby (page_name,visibleby) values ('./Activity_showall.ph
 
 
 
-
-use SEO ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
+insert into pages_visibleby (page_name,visibleby) values ('./SEO_FindBest.php','Demo') ;
+insert into pages_visibleby (page_name,visibleby) values ('./Keywords_run.php','Demo') ;
 
 
-use SEO ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
-insert into pages_visibleby (page_name,visibleby) values ('','FullAdmin') ;
+
