@@ -5,7 +5,6 @@
 $servernamePROD = "" ;
 $servernameDEV = "192.168.1.206" ;
 $servernameDaniel = "192.168.1.68" ;
-$servernameLocal = "127.0.0.1" ;
 
 
 
