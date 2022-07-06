@@ -1,147 +1,54 @@
+-- MySQL dump 10.13  Distrib 8.0.29, for Linux (x86_64)
+--
+-- Host: localhost    Database: SEO
+-- ------------------------------------------------------
+-- Server version	8.0.29-0ubuntu0.22.04.2
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `Keywords`
+--
+
+DROP TABLE IF EXISTS `Keywords`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Keywords` (
-  `id` bigint NOT NULL,
+  `id` bigint NOT NULL AUTO_INCREMENT,
   `iscurrent` int DEFAULT NULL,
   `Keywords` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `MinRun` bigint DEFAULT '0',
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=223 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+/*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `Keywords`
 --
 
+LOCK TABLES `Keywords` WRITE;
+/*!40000 ALTER TABLE `Keywords` DISABLE KEYS */;
+INSERT INTO `Keywords` VALUES (1,1,'agence web\r',5,'2019-07-16 15:07:55'),(2,1,'agence webmarketing\r',6,'2019-07-16 15:07:55'),(3,1,'content marketing\r',7,'2019-07-16 15:07:55'),(4,1,'inbound marketing\r',8,'2019-07-16 15:07:55'),(5,1,'marketing de contenu\r',9,'2019-07-16 15:07:55'),(6,1,'outils de veille\r',12,'2019-07-16 15:07:55'),(7,1,'outils de veille concurrentielle\r',13,'2019-07-16 15:07:55'),(8,1,'outils SEO\r',11,'2019-07-16 15:07:55'),(9,1,'rédaction de contenu\r',14,'2019-07-16 15:07:55'),(10,1,'seo tools\r\n',24,'2019-08-15 13:50:51'),(11,1,'stratégie de content marketing\r',15,'2019-07-16 15:07:55'),(12,1,'Adaptive Research',16,'2019-07-16 15:07:55'),(13,1,'crm tools\r\n',17,'2019-08-15 13:51:04'),(14,1,'outils CRM\r',10,'2019-07-19 06:12:23'),(15,1,'customer relationship management',23,'2019-08-15 13:51:25'),(16,0,'landing page\r\n',40,'2019-08-15 13:51:11'),(17,1,'landing page efficace\r',39,'2019-07-25 19:54:21'),(18,1,'meilleures landing pages',41,'2019-07-25 19:54:21'),(19,1,'tunnel de vente\r',60,'2019-07-31 18:12:56'),(20,1,'parcours d\'achat',59,'2019-07-31 18:16:38'),(21,1,'parcours client',61,'2019-08-03 03:32:16'),(22,1,'lead nurturing',62,'2019-08-03 16:37:01'),(23,1,'buyer\'s journey',63,'2019-08-03 16:39:31'),(24,1,'référencement naturel\r\n',65,'2019-08-03 17:06:57'),(25,1,'référencement organique\r',64,'2019-08-03 16:42:58'),(26,0,'sea',66,'2019-08-16 08:01:08'),(27,1,'seo',67,'2019-08-15 13:51:48'),(28,1,'agence de rédaction éditoriale',68,'2019-08-03 20:36:44'),(29,1,'agence de rédaction de contenu\r',69,'2019-08-03 20:38:47'),(30,1,'agence de rédaction de contenu web',70,'2019-08-03 20:38:47'),(31,1,'rédaction de contenu web\r',132,'2019-08-03 21:03:22'),(32,1,'rédaction de contenu web tarif\r',137,'2019-08-03 21:03:22'),(33,1,'rédacteur web agence\r',136,'2019-08-03 21:03:22'),(34,1,'site de rédaction en français\r',135,'2019-08-03 21:03:22'),(35,1,'agence éditoriale\r',134,'2019-08-03 21:03:22'),(36,1,'rédaction de contenu définition\r',133,'2019-08-03 21:03:22'),(37,1,'société rédaction web\r',131,'2019-08-03 21:03:22'),(38,1,'rédaction web paris',130,'2019-08-03 21:03:22'),(39,1,'SSII\r',91,'2019-08-06 20:04:47'),(40,1,'ESN entreprise de service\r\n\r\n',92,'2019-08-06 20:04:47'),(41,1,'Entreprise de services du numérique',93,'2019-08-06 20:04:47'),(42,1,'SSII indépendants',94,'2019-08-06 20:39:09'),(43,1,'freelance',95,'2019-08-06 20:41:29'),(44,1,'SSII offre de mission pour indépendants',128,'2019-08-07 06:16:18'),(45,1,'mission freelance',127,'2019-08-07 06:16:39'),(46,1,'cabinet de conseil',126,'2019-08-07 19:19:26'),(47,1,'rédaction d\'articles pour le web',129,'2019-08-07 19:20:53'),(48,1,'content spinning\r',138,'2019-08-08 19:36:04'),(49,1,'génération automatique de texte \r',140,'2019-08-08 19:36:04'),(50,1,'paraphraseur de texte',139,'2019-08-08 19:36:04'),(51,1,'marketing automation',146,'2019-08-10 22:03:19'),(52,1,'agence marketing\r',173,'2019-08-15 12:07:15'),(53,1,'agence marketing digital\r',177,'2019-08-15 12:07:15'),(54,1,'agence marketing paris\r',178,'2019-08-15 12:07:15'),(55,1,'agence marketing digital paris\r',176,'2019-08-15 12:07:15'),(56,1,'agence de communication\r',175,'2019-08-15 12:07:15'),(57,1,'agence de communication paris',174,'2019-08-15 12:07:15'),(58,1,'stratégie digitale',179,'2019-08-15 12:28:42'),(59,1,'exemple landing page',180,'2019-08-15 12:29:48'),(60,0,'landing page exemple\r',181,'2019-08-15 12:44:23'),(61,0,'exemple de landing page\r',182,'2019-08-15 12:44:06'),(62,1,'landing page formulaire\r\n',183,'2019-08-15 12:38:14'),(63,1,'newsletter landing page\r',184,'2019-08-15 12:32:39'),(64,1,'landing page facebook\r\n',186,'2019-08-15 12:38:52'),(65,1,'créer une landing page facebook\r',187,'2019-08-15 12:32:39'),(66,1,'créer une landing page\r',188,'2019-08-15 12:32:39'),(67,0,'landing page c est quoi',185,'2019-08-15 12:32:39'),(68,1,'content marketing blog',192,'2019-08-15 12:47:38'),(69,1,'landing page qui convertit\r',189,'2019-08-15 12:49:35'),(70,1,'landing page conversion\r',190,'2019-08-15 12:49:35'),(71,1,'landing page taux de conversion',191,'2019-08-15 12:49:35'),(72,1,'email lead nurturing',193,'2019-08-15 13:46:13'),(73,1,'stratégie de lead nurturing',194,'2019-08-15 13:47:32'),(74,1,'lead nurturing B2B',195,'2019-08-15 13:49:15'),(75,1,'google ads\r',196,'2019-08-15 13:56:24'),(76,1,'google adwords\r',200,'2019-08-15 13:56:24'),(77,1,'adwords',198,'2019-08-15 13:56:24'),(78,1,'facebook ads',199,'2019-08-15 13:56:31'),(79,1,'générer des leads',201,'2019-08-16 15:11:45'),(80,1,'agence marketing automation',202,'2019-08-16 15:12:21'),(81,1,'trouver les bons mots clés',203,'2019-08-16 15:13:53'),(82,1,'augmenter son trafic',204,'2019-08-16 15:14:30'),(83,1,'augmenter le trafic d\'un site web',205,'2019-08-16 15:14:50'),(84,1,'augmenter le trafic naturel',206,'2019-08-16 15:15:02'),(85,1,'référencement payant',207,'2019-08-16 15:15:12'),(86,1,'marketing calculer un budget',208,'2019-08-18 06:18:59'),(87,1,'seo budget ',209,'2019-08-18 06:19:55'),(88,1,'seo calculer budget',210,'2019-08-18 10:36:10'),(89,1,'marketing qualified lead\r',211,'2019-08-18 12:43:17'),(90,1,'sales qualified lead',212,'2019-08-18 12:43:17'),(91,1,'questions à poser pour qualifier un lead',213,'2019-08-18 13:08:55'),(92,1,'seo coût',215,'2019-08-19 08:47:29'),(93,1,'augmenter ses ventes',304,'2019-08-28 18:12:48'),(94,1,'booster ses ventes',305,'2019-08-28 18:13:04'),(95,1,'efficacité commerciale',306,'2019-08-28 21:28:07'),(96,1,'expert comptable\r',329,'2019-09-03 05:55:39'),(97,1,'expert comptable paris\r',332,'2019-09-03 05:55:39'),(98,1,'expert comptable lyon\r',330,'2019-09-03 05:55:39'),(99,1,'expert comptable marseille\r\n',331,'2019-09-03 05:55:39'),(100,1,'comptabilité analytique\r',326,'2019-09-03 05:55:39'),(101,1,'liasse fiscale',333,'2019-09-03 05:55:39'),(102,1,'plateforme pour freelance',548,'2019-09-22 09:31:03'),(103,1,'cabinet de conseil à taille humaine',545,'2019-09-28 13:29:49'),(104,1,'plateforme pour indépendant',549,'2019-09-28 13:30:09'),(105,1,'référenceur\r',82,'2022-04-15 08:51:10'),(106,1,'référencement',128,'2022-04-15 08:51:10'),(107,1,'communication graphique\r',88,'2022-04-15 10:46:55'),(108,1,'logo\r',93,'2022-04-15 10:46:55'),(109,1,'identité visuelle\r',92,'2022-04-15 10:46:55'),(110,1,'communication imprimée\r',89,'2022-04-15 10:46:55'),(111,1,'communication numérique\r',90,'2022-04-15 10:46:55'),(112,1,'communication par l\'image',91,'2022-04-15 10:46:55'),(113,1,'big data\r',102,'2022-04-17 10:32:15'),(114,1,'data augmentation chiffre d\'affaires\r',105,'2022-04-17 10:32:15'),(115,1,'data analytics\r',104,'2022-04-17 10:32:15'),(116,1,'spécialiste exploitation data\r',107,'2022-04-17 10:32:15'),(117,1,'bien utiliser ses données clients\r',101,'2022-04-17 10:32:15'),(118,1,'comment gérer les données de votre entreprise\r',103,'2022-04-17 10:32:15'),(119,1,'gestion des données de votre entreprise',106,'2022-04-17 10:32:15'),(120,1,'seo nemours\r',404,'2022-05-01 15:54:20'),(121,1,'webdesign nemours\r',408,'2022-05-01 15:54:20'),(122,1,'web designer nemours\r',406,'2022-05-01 15:54:20'),(123,1,'agence seo nemours\r',394,'2022-05-01 15:54:20'),(124,1,'agence marketing digital nemours\r',392,'2022-05-01 15:54:20'),(125,1,'graphiste nemours\r',396,'2022-05-01 15:54:20'),(126,1,'inbound marketing nemours\r',398,'2022-05-01 15:54:20'),(127,1,'référencement naturel nemours\r',400,'2022-05-01 15:54:20'),(128,1,'sea nemours\r',402,'2022-05-01 15:54:20'),(129,1,'seo fontainebleau\r',403,'2022-05-01 15:54:20'),(130,1,'webdesign fontainebleau\r',407,'2022-05-01 15:54:20'),(131,1,'web designer fontainebleau\r',405,'2022-05-01 15:54:20'),(132,1,'agence seo fontainebleau\r',393,'2022-05-01 15:54:20'),(133,1,'agence marketing digital fontainebleau\r',391,'2022-05-01 15:54:20'),(134,1,'graphiste fontainebleau\r',395,'2022-05-01 15:54:20'),(135,1,'inbound marketing fontainebleau\r',397,'2022-05-01 15:54:20'),(136,1,'référencement naturel fontainebleau\r',399,'2022-05-01 15:54:20'),(137,1,'sea fontainebleau',401,'2022-05-01 15:54:20'),(138,1,'achat maison nemours\r',422,'2022-05-01 17:05:48'),(139,1,'vente maison nemours\r',457,'2022-05-01 17:05:49'),(140,1,'achat appartement nemours\r',412,'2022-05-01 17:05:49'),(141,1,'vente appartement nemours\r',447,'2022-05-01 17:05:49'),(142,1,'achat terrain nemours\r',427,'2022-05-01 17:05:49'),(143,1,'vente terrain nemours\r',462,'2022-05-01 17:05:49'),(144,1,'location maison nemours\r',442,'2022-05-01 17:05:49'),(145,1,'location appartement nemours\r',432,'2022-05-01 17:05:49'),(146,1,'location local commercial nemours\r',437,'2022-05-01 17:05:49'),(147,1,'achat local commercial nemours\r',417,'2022-05-01 17:05:49'),(148,1,'vente local commercial nemours\r',452,'2022-05-01 17:05:49'),(149,1,'achat maison fontainebleau\r',420,'2022-05-01 17:05:49'),(150,1,'vente maison fontainebleau\r',455,'2022-05-01 17:05:49'),(151,1,'achat appartement fontainebleau\r',410,'2022-05-01 17:05:49'),(152,1,'vente appartement fontainebleau\r',445,'2022-05-01 17:05:49'),(153,1,'achat terrain fontainebleau\r',425,'2022-05-01 17:05:49'),(154,1,'vente terrain fontainebleau\r',460,'2022-05-01 17:05:49'),(155,1,'location maison fontainebleau\r',440,'2022-05-01 17:05:49'),(156,1,'location appartement fontainebleau\r',430,'2022-05-01 17:05:49'),(157,1,'location local commercial fontainebleau\r',435,'2022-05-01 17:05:49'),(158,1,'achat local commercial fontainebleau\r',415,'2022-05-01 17:05:49'),(159,1,'vente local commercial fontainebleau\r',450,'2022-05-01 17:05:49'),(160,1,'achat maison saint pierre les nemours\r',423,'2022-05-01 17:05:49'),(161,1,'vente maison saint pierre les nemours\r',458,'2022-05-01 17:05:49'),(162,1,'achat appartement saint pierre les nemours\r',413,'2022-05-01 17:05:49'),(163,1,'vente appartement saint pierre les nemours\r',448,'2022-05-01 17:05:49'),(164,1,'achat terrain saint pierre les nemours\r',428,'2022-05-01 17:05:49'),(165,1,'vente terrain saint pierre les nemours\r',463,'2022-05-01 17:05:49'),(166,1,'location maison saint pierre les nemours\r',443,'2022-05-01 17:05:49'),(167,1,'location appartement saint pierre les nemours\r',433,'2022-05-01 17:05:49'),(168,1,'location local commercial saint pierre les nemours\r',438,'2022-05-01 17:05:49'),(169,1,'achat local commercial saint pierre les nemours\r',418,'2022-05-01 17:05:49'),(170,1,'vente local commercial saint pierre les nemours\r',453,'2022-05-01 17:05:49'),(171,1,'achat maison montcourt fromonville\r',421,'2022-05-01 17:05:49'),(172,1,'vente maison montcourt fromonville\r',456,'2022-05-01 17:05:49'),(173,1,'achat appartement montcourt fromonville\r',411,'2022-05-01 17:05:49'),(174,1,'vente appartement montcourt fromonville\r',446,'2022-05-01 17:05:49'),(175,1,'achat terrain montcourt fromonville\r',426,'2022-05-01 17:05:49'),(176,1,'vente terrain montcourt fromonville\r',461,'2022-05-01 17:05:49'),(177,1,'location maison montcourt fromonville\r',441,'2022-05-01 17:05:49'),(178,1,'location appartement montcourt fromonville\r',431,'2022-05-01 17:05:49'),(179,1,'location local commercial montcourt fromonville\r',436,'2022-05-01 17:05:49'),(180,1,'achat local commercial montcourt fromonville\r',416,'2022-05-01 17:05:49'),(181,1,'vente local commercial montcourt fromonville\r',451,'2022-05-01 17:05:49'),(182,1,'achat maison chateau landon 77570\r',419,'2022-05-01 17:05:49'),(183,1,'vente maison chateau landon 77570\r',454,'2022-05-01 17:05:49'),(184,1,'achat appartement chateau landon 77570\r',409,'2022-05-01 17:05:49'),(185,1,'vente appartement chateau landon 77570\r',444,'2022-05-01 17:05:49'),(186,1,'achat terrain chateau landon 77570\r',424,'2022-05-01 17:05:49'),(187,1,'vente terrain chateau landon 77570\r',459,'2022-05-01 17:05:49'),(188,1,'location maison chateau landon 77570\r',439,'2022-05-01 17:05:49'),(189,1,'location appartement chateau landon 77570\r',429,'2022-05-01 17:05:49'),(190,1,'location local commercial chateau landon 77570\r',434,'2022-05-01 17:05:49'),(191,1,'achat local commercial chateau landon 77570\r',414,'2022-05-01 17:05:49'),(192,1,'vente local commercial chateau landon 77570',449,'2022-05-01 17:05:49'),(193,1,'immobilier nemours\r',84,'2022-05-04 10:02:43'),(194,1,'immobilier chateau landon 77570\r',81,'2022-05-04 10:02:43'),(195,1,'immobilier fontainebleau\r',82,'2022-05-04 10:02:43'),(196,1,'immobilier montcourt fromonville\r',83,'2022-05-04 10:02:43'),(197,1,'immobilier saint pierre les nemours',85,'2022-05-04 10:02:43'),(198,1,'seo agency new york',191,'2022-05-05 06:47:34'),(199,1,'inbound marketing new york',202,'2022-05-05 10:13:29'),(200,1,'content marketing agency new york',200,'2022-05-05 10:15:00'),(201,1,'digital marketing agency',0,'2022-05-05 10:15:26'),(202,1,'digital marketing agency new york',201,'2022-05-05 10:15:38'),(203,1,'lead generation agency new york',203,'2022-05-05 10:18:34'),(204,1,'vendre sa maison nemours\r',496,'2022-05-10 11:07:06'),(205,1,'vendre son appartement nemours\r',500,'2022-05-10 11:07:06'),(206,1,'vendre sa maison fontainebleau\r',493,'2022-05-10 11:07:06'),(207,1,'vendre son appartement fontainebleau\r',497,'2022-05-10 11:07:06'),(208,1,'vendre sa maison gretz loing\r',494,'2022-05-10 11:07:06'),(209,1,'vendre son appartement gretz sur loing\r',498,'2022-05-10 11:07:06'),(210,1,'vendre sa maison moret veneux les sablons\r',495,'2022-05-10 11:07:06'),(211,1,'vendre son appartement moret veneux les sablons',499,'2022-05-10 11:07:06'),(212,1,'estimation maison nemours\r',501,'2022-05-10 11:42:04'),(213,1,'prix m2 nemours',502,'2022-05-10 11:42:04'),(214,1,'estimation maison fontainebleau\r',504,'2022-05-10 12:36:03'),(215,1,'prix m2 fontainebleau\r',508,'2022-05-10 12:36:03'),(216,1,'estimation maison montcourt fromonville\r',505,'2022-05-10 12:36:03'),(217,1,'prix m2 montcourt fromonville\r',509,'2022-05-10 12:36:03'),(218,1,'estimation maison chateau landon 77570\r',503,'2022-05-10 12:36:03'),(219,1,'prix m2 chateau landon 77570',507,'2022-05-10 12:36:03'),(220,1,'agence seo paris',717,'2022-06-14 03:56:08'),(221,1,'agence seo marseille',718,'2022-06-14 03:56:24'),(222,1,'agence seo lyon',719,'2022-06-14 03:56:31');
+/*!40000 ALTER TABLE `Keywords` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
-
-INSERT INTO `Keywords` (`id`, `iscurrent`, `Keywords`, `MinRun`, `date`) VALUES
-(1, 1, 'agence web\r', 5, '2019-07-16 15:07:55'),
-(2, 1, 'agence webmarketing\r', 6, '2019-07-16 15:07:55'),
-(3, 1, 'content marketing\r', 7, '2019-07-16 15:07:55'),
-(4, 1, 'inbound marketing\r', 8, '2019-07-16 15:07:55'),
-(5, 1, 'marketing de contenu\r', 9, '2019-07-16 15:07:55'),
-(6, 1, 'outils de veille\r', 12, '2019-07-16 15:07:55'),
-(7, 1, 'outils de veille concurrentielle\r', 13, '2019-07-16 15:07:55'),
-(8, 1, 'outils SEO\r', 11, '2019-07-16 15:07:55'),
-(9, 1, 'rédaction de contenu\r', 14, '2019-07-16 15:07:55'),
-(10, 1, 'seo tools\r\n', 24, '2019-08-15 13:50:51'),
-(11, 1, 'stratégie de content marketing\r', 15, '2019-07-16 15:07:55'),
-(12, 1, 'Adaptive Research', 16, '2019-07-16 15:07:55'),
-(13, 1, 'crm tools\r\n', 17, '2019-08-15 13:51:04'),
-(14, 1, 'outils CRM\r', 10, '2019-07-19 06:12:23'),
-(15, 1, 'customer relationship management', 23, '2019-08-15 13:51:25'),
-(16, 0, 'landing page\r\n', 40, '2019-08-15 13:51:11'),
-(17, 1, 'landing page efficace\r', 39, '2019-07-25 19:54:21'),
-(18, 1, 'meilleures landing pages', 41, '2019-07-25 19:54:21'),
-(19, 1, 'tunnel de vente\r', 60, '2019-07-31 18:12:56'),
-(20, 1, 'parcours d\'achat', 59, '2019-07-31 18:16:38'),
-(21, 1, 'parcours client', 61, '2019-08-03 03:32:16'),
-(22, 1, 'lead nurturing', 62, '2019-08-03 16:37:01'),
-(23, 1, 'buyer\'s journey', 63, '2019-08-03 16:39:31'),
-(24, 1, 'référencement naturel\r\n', 65, '2019-08-03 17:06:57'),
-(25, 1, 'référencement organique\r', 64, '2019-08-03 16:42:58'),
-(26, 0, 'sea', 66, '2019-08-16 08:01:08'),
-(27, 1, 'seo', 67, '2019-08-15 13:51:48'),
-(28, 1, 'agence de rédaction éditoriale', 68, '2019-08-03 20:36:44'),
-(29, 1, 'agence de rédaction de contenu\r', 69, '2019-08-03 20:38:47'),
-(30, 1, 'agence de rédaction de contenu web', 70, '2019-08-03 20:38:47'),
-(31, 1, 'rédaction de contenu web\r', 132, '2019-08-03 21:03:22'),
-(32, 1, 'rédaction de contenu web tarif\r', 137, '2019-08-03 21:03:22'),
-(33, 1, 'rédacteur web agence\r', 136, '2019-08-03 21:03:22'),
-(34, 1, 'site de rédaction en français\r', 135, '2019-08-03 21:03:22'),
-(35, 1, 'agence éditoriale\r', 134, '2019-08-03 21:03:22'),
-(36, 1, 'rédaction de contenu définition\r', 133, '2019-08-03 21:03:22'),
-(37, 1, 'société rédaction web\r', 131, '2019-08-03 21:03:22'),
-(38, 1, 'rédaction web paris', 130, '2019-08-03 21:03:22'),
-(39, 1, 'SSII\r', 91, '2019-08-06 20:04:47'),
-(40, 1, 'ESN entreprise de service\r\n\r\n', 92, '2019-08-06 20:04:47'),
-(41, 1, 'Entreprise de services du numérique', 93, '2019-08-06 20:04:47'),
-(42, 1, 'SSII indépendants', 94, '2019-08-06 20:39:09'),
-(43, 1, 'freelance', 95, '2019-08-06 20:41:29'),
-(44, 1, 'SSII offre de mission pour indépendants', 128, '2019-08-07 06:16:18'),
-(45, 1, 'mission freelance', 127, '2019-08-07 06:16:39'),
-(46, 1, 'cabinet de conseil', 126, '2019-08-07 19:19:26'),
-(47, 1, 'rédaction d\'articles pour le web', 129, '2019-08-07 19:20:53'),
-(48, 1, 'content spinning\r', 138, '2019-08-08 19:36:04'),
-(49, 1, 'génération automatique de texte \r', 140, '2019-08-08 19:36:04'),
-(50, 1, 'paraphraseur de texte', 139, '2019-08-08 19:36:04'),
-(51, 1, 'marketing automation', 146, '2019-08-10 22:03:19'),
-(52, 1, 'agence marketing\r', 173, '2019-08-15 12:07:15'),
-(53, 1, 'agence marketing digital\r', 177, '2019-08-15 12:07:15'),
-(54, 1, 'agence marketing paris\r', 178, '2019-08-15 12:07:15'),
-(55, 1, 'agence marketing digital paris\r', 176, '2019-08-15 12:07:15'),
-(56, 1, 'agence de communication\r', 175, '2019-08-15 12:07:15'),
-(57, 1, 'agence de communication paris', 174, '2019-08-15 12:07:15'),
-(58, 1, 'stratégie digitale', 179, '2019-08-15 12:28:42'),
-(59, 1, 'exemple landing page', 180, '2019-08-15 12:29:48'),
-(60, 0, 'landing page exemple\r', 181, '2019-08-15 12:44:23'),
-(61, 0, 'exemple de landing page\r', 182, '2019-08-15 12:44:06'),
-(62, 1, 'landing page formulaire\r\n', 183, '2019-08-15 12:38:14'),
-(63, 1, 'newsletter landing page\r', 184, '2019-08-15 12:32:39'),
-(64, 1, 'landing page facebook\r\n', 186, '2019-08-15 12:38:52'),
-(65, 1, 'créer une landing page facebook\r', 187, '2019-08-15 12:32:39'),
-(66, 1, 'créer une landing page\r', 188, '2019-08-15 12:32:39'),
-(67, 0, 'landing page c est quoi', 185, '2019-08-15 12:32:39'),
-(68, 1, 'content marketing blog', 192, '2019-08-15 12:47:38'),
-(69, 1, 'landing page qui convertit\r', 189, '2019-08-15 12:49:35'),
-(70, 1, 'landing page conversion\r', 190, '2019-08-15 12:49:35'),
-(71, 1, 'landing page taux de conversion', 191, '2019-08-15 12:49:35'),
-(72, 1, 'email lead nurturing', 193, '2019-08-15 13:46:13'),
-(73, 1, 'stratégie de lead nurturing', 194, '2019-08-15 13:47:32'),
-(74, 1, 'lead nurturing B2B', 195, '2019-08-15 13:49:15'),
-(75, 1, 'google ads\r', 196, '2019-08-15 13:56:24'),
-(76, 1, 'google adwords\r', 200, '2019-08-15 13:56:24'),
-(77, 1, 'adwords', 198, '2019-08-15 13:56:24'),
-(78, 1, 'facebook ads', 199, '2019-08-15 13:56:31'),
-(79, 1, 'générer des leads', 201, '2019-08-16 15:11:45'),
-(80, 1, 'agence marketing automation', 202, '2019-08-16 15:12:21'),
-(81, 1, 'trouver les bons mots clés', 203, '2019-08-16 15:13:53'),
-(82, 1, 'augmenter son trafic', 204, '2019-08-16 15:14:30'),
-(83, 1, 'augmenter le trafic d\'un site web', 205, '2019-08-16 15:14:50'),
-(84, 1, 'augmenter le trafic naturel', 206, '2019-08-16 15:15:02'),
-(85, 1, 'référencement payant', 207, '2019-08-16 15:15:12'),
-(86, 1, 'marketing calculer un budget', 208, '2019-08-18 06:18:59'),
-(87, 1, 'seo budget ', 209, '2019-08-18 06:19:55'),
-(88, 1, 'seo calculer budget', 210, '2019-08-18 10:36:10'),
-(89, 1, 'marketing qualified lead\r', 211, '2019-08-18 12:43:17'),
-(90, 1, 'sales qualified lead', 212, '2019-08-18 12:43:17'),
-(91, 1, 'questions à poser pour qualifier un lead', 213, '2019-08-18 13:08:55'),
-(92, 1, 'seo coût', 215, '2019-08-19 08:47:29'),
-(93, 1, 'augmenter ses ventes', 304, '2019-08-28 18:12:48'),
-(94, 1, 'booster ses ventes', 305, '2019-08-28 18:13:04'),
-(95, 1, 'efficacité commerciale', 306, '2019-08-28 21:28:07'),
-(96, 1, 'expert comptable\r', 329, '2019-09-03 05:55:39'),
-(97, 1, 'expert comptable paris\r', 332, '2019-09-03 05:55:39'),
-(98, 1, 'expert comptable lyon\r', 330, '2019-09-03 05:55:39'),
-(99, 1, 'expert comptable marseille\r\n', 331, '2019-09-03 05:55:39'),
-(100, 1, 'comptabilité analytique\r', 326, '2019-09-03 05:55:39'),
-(101, 1, 'liasse fiscale', 333, '2019-09-03 05:55:39'),
-(102, 1, 'plateforme pour freelance', 548, '2019-09-22 09:31:03'),
-(103, 1, 'cabinet de conseil à taille humaine', 545, '2019-09-28 13:29:49'),
-(104, 1, 'plateforme pour indépendant', 549, '2019-09-28 13:30:09'),
-(105, 1, 'référenceur\r', 82, '2022-04-15 08:51:10'),
-(106, 1, 'référencement', 0, '2022-04-15 08:51:10');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `Keywords`
---
-ALTER TABLE `Keywords`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `Keywords`
---
-ALTER TABLE `Keywords`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
-COMMIT;
-
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2022-07-06 11:07:56

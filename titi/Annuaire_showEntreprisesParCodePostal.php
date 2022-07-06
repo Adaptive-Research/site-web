@@ -255,12 +255,12 @@ if ($CodePostal != "")
   #$contenu = $contenu."<br><br><br>" ;
   #$contenu = $contenu.$sql."<br>" ;
   
-  $$result = $conn->query($sql);
+  $result = $conn->query($sql);
 
 
 
   $contenu = $contenu."<br>" ;
-  $contenu = $contenu."<b style=\"margin-left:1%\">".$$result->num_rows." résultats</b><br>" ;
+  $contenu = $contenu."<b style=\"margin-left:1%\">".$result->num_rows." résultats</b><br>" ;
   $contenu = $contenu."<br>" ;
 
 
@@ -278,12 +278,12 @@ if ($CodePostal != "")
   $contenu = "" ;
 
 
-  if ($$result->num_rows > 0)
+  if ($result->num_rows > 0)
   {
 
     // output data of each row
     $i = 1 ;
-    while($row = $$result->fetch_assoc())
+    while($row = $result->fetch_assoc())
     {
       $contenu = $contenu."<tr>" ;
 
