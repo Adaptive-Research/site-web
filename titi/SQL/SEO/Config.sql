@@ -35,37 +35,6 @@ CREATE TABLE IF NOT EXISTS password_reset_requests (
 
 
 use SEO ;
-drop table if exists users;
-CREATE TABLE IF NOT EXISTS users (
-  id INT(11) NOT NULL AUTO_INCREMENT,
-  iscurrent INT,
-
-  Genre VARCHAR(5) NOT NULL,          
-  Prenom  VARCHAR(75),                  
-  Nom  VARCHAR(75),                     
-
-  Email varchar(250) NOT NULL,
-  Password varchar(250) NOT NULL,
-  email_verified int,
-
-  group_name varchar(50) NOT NULL,
-
-  ValueLangue VARCHAR(3),                
-  Langue VARCHAR(30),                   
-
-  author INT(11),                        
-
-  date_registered TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
-  last_login int(11),
-  PRIMARY KEY (id)
-) ;
-
-insert into users (iscurrent,Genre,Prenom,Nom,Email,Password,email_verified,ValueLangue,Langue,group_name) values (1,'Homme','Daniel','Dupard','ddupard68@gmail.com','$2y$10$Tq78wolGcEXPK5A4oLh/nOWqh.yVcD6NWkTK/AqBxCiVs04766fqC',1,'FR','Français','FullAdmin') ;
-insert into users (iscurrent,Genre,Prenom,Nom,Email,Password,email_verified,ValueLangue,Langue,group_name) values (1,'Homme','Demo','','demo@gmail.com','$2y$10$WMjwKgPHhyFSU668nLyr/O3mInqoNhd9ITz7YMpj6s37HRikH4wu2',1,'FR','Français','Demo') ;
-
-
-
-use SEO ;
 drop table if exists user_groups ;
 CREATE TABLE IF NOT EXISTS user_groups (
   group_name varchar(50) NOT NULL,

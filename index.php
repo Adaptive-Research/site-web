@@ -38,6 +38,14 @@ Route::add($baseURL.'/test',function()
     require $baseREP.'/test.php' ;
 });
 
+
+Route::add($baseURL.'/test2',function()
+{
+    global $ServeurWeb, $baseREP,$tinyREP,$baseURL,$basePython,$py_Articles,$py_Keywords,$py_Syntaxe,$py_PagesWeb  ;
+    require $baseREP.'/test2.php' ;
+});
+
+
 // Quand on a un message d'erreur, on revient au début
 Route::pathNotFound(function(){
 	echo "<H1> Page Not Found. </H1>" ;
