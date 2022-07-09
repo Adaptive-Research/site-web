@@ -2,7 +2,7 @@
     
 // définition des fichiers à lire
 $fheader = $baseLP."/templates/header.html" ;
-$fichier = $baseLP."/jemeformeauSEO.html" ;
+$fichier = $baseLP."/templates/jemeformeauSEO.html" ;
 $footer = $baseLP."/templates/footer.html" ;
 
 

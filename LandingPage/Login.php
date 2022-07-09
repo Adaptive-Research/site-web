@@ -65,7 +65,7 @@ if (isset($_POST['Submit']))
 
 // définition des fichiers à lire
 $fheader = $baseLP."/templates/header.html" ;
-$fichier = $baseLP."/Login.html" ;
+$fichier = $baseLP."/templates/Login.html" ;
 $footer = $baseLP."/templates/footer2.html" ;
 
 
