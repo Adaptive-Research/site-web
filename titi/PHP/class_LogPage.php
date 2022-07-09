@@ -13,7 +13,7 @@
 
 	class LogPage
 	{
-		public $idSession;
+		public $IP;
 		public $Page ;
 		public $Method ;
 
@@ -24,7 +24,7 @@
 		{
 			$this->db = new Database(01);
 			$this->db->set_charset("utf8");
-			$this->idSession = "" ;
+			$this->IP = "" ;
 			$this->Page = "" ;
 			$this->Method = "" ;
 		}
@@ -32,9 +32,9 @@
 
 
 
-		public function SetPage($ids,$p,$m)
+		public function SetPage($ip,$p,$m)
 		{
-			$this->idSession = $ids ;
+			$this->IP = $ip ;
 			$this->Page = $p ;
 			$this->Method = $m ;
 		}
@@ -48,7 +48,7 @@
 
 				if ($p1 == false)
 				{
-					$sql = "insert into LogPage (idSession,Page,Method) values('".$this->idSession."','".$this->Page."','".$this->Method."')" ;
+					$sql = "insert into LogPage (IP,Page,Method) values('".$this->IP."','".$this->Page."','".$this->Method."')" ;
 					$stmt = $this->db->query($sql);
 					if($stmt->affected_rows == 1)
 							return 1;
@@ -58,20 +58,6 @@
 		}
 
 
-
-		public function Load($ids)
-		{
-			$stmt = $this->db->query("select * from LogPage where idSession = '".$ids."'") ;
-			if($this->db->getRowCount() >= 1)
-			{
-				$this->idSession = $ids ;
-				$this->Page = $stmt[0]->Page ;
-				$this->Method = $stmt[0]->Method ;
-
-				return true;
-			}
-			return false ;
-		}
 
 
 

@@ -1,5 +1,7 @@
 <?php
 
+require_once $baseREP.'/PHP/class_LogPage.php' ;
+use \Log\LogPage ;
 
 
 
@@ -28,6 +30,12 @@ class Route{
     self::$methodNotAllowed = $function;
   }
 
+
+
+
+
+
+
   public static function run($basepath = '/')
   {
 
@@ -36,15 +44,11 @@ class Route{
     // Parse current url
     $parsed_url = parse_url($_SERVER['REQUEST_URI']);//Parse Uri
 
-    #print_r($parsed_url) ;
 
     if(isset($parsed_url['path']))
       $path = $parsed_url['path'];
     else
       $path = '/';
-    
-  
-
     
 
     // Get current request method
@@ -76,6 +80,10 @@ class Route{
       if(preg_match('#'.$route['expression'].'#',$path,$matches))
       {
 
+        
+
+
+
 
         $path_match_found = true;
 
@@ -83,14 +91,15 @@ class Route{
         if(strtolower($method) == strtolower($route['method']))
         {
 
-         
-
           array_shift($matches);// Always remove first element. This contains the whole string
 
           if($basepath!=''&&$basepath!='/')
             array_shift($matches);// Remove basepath
 
-
+          // on loggue la demande
+          $objLP = new LogPage ;
+          $objLP->SetPage($_SERVER['REMOTE_ADDR'],$path,$method) ;
+          $objLP->Save() ;
 
           call_user_func_array($route['function'], $matches);
 
