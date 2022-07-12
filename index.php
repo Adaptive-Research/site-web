@@ -640,6 +640,13 @@ Route::add($baseURL.'/Find-Company-By-Type',function(){
 
 
 
+Route::add($baseURL.'/Repartition-Entreprises',function(){
+    global $ServeurWeb, $baseREP,$tinyREP,$baseURL,$basePython,$py_Articles,$py_Keywords,$py_Syntaxe,$py_PagesWeb  ;
+    require $baseREP.'/Annuaire_RepartitionEntreprisesParActivite.php' ;
+});
+
+
+
 Route::add($baseURL.'/Find-Companies-By-Area',function(){
     global $ServeurWeb, $baseREP,$tinyREP,$baseURL,$basePython,$py_Articles,$py_Keywords,$py_Syntaxe,$py_PagesWeb  ;
     require $baseREP.'/Annuaire_showEntreprisesZoneGeo.php' ;

@@ -45,7 +45,6 @@ else
 #echo $servername." ".$username." ".$password." ".$dbname."\n" ;
 
 
-$MyError = "" ;
 
 
 
@@ -114,11 +113,14 @@ if ( isset($_POST['Submit']) )
 
   if (empty($_POST['sDate1']) == false)
   {
-    $sDate1 = NettoyerDate($_POST['sDate1']) ;
+    //$sDate1 = NettoyerDate($_POST['sDate1']) ;
+    $sDate1 = $_POST['sDate1'] ;
 
+    
     $date = new DateTime($sDate1); // Y-m-d
     $date->add(new DateInterval('P30D'));
     $sDate2 = $date->format('Y-m-d') ;  
+    
   }
 
 
@@ -164,7 +166,8 @@ include $baseREP.'/PHP/config.php';
 
 
 // la requête pour récupérer les infos
-if ($CodePostal != "")
+
+if ($CodePostal != "" or empty($sDate1) == false or $TypeStructure != "")
 {
 
   $sDateJour = date("Y-m-d") ;
@@ -181,12 +184,16 @@ if ($CodePostal != "")
   $conn->set_charset('utf8');
 
 
-  $sql = "select temp.*, siu.Dirigeants FROM (SELECT se.siren, siret, dateCreationEtablissement, se.dateDebut, sigleUniteLegale,prenomUsuelUniteLegale,nomUniteLegale,denominationUniteLegale, " ;
+  $sql = "SELECT se.siren, siret, dateCreationEtablissement, se.dateDebut, sigleUniteLegale,prenomUsuelUniteLegale,nomUniteLegale,denominationUniteLegale, " ;
   $sql = $sql." denominationUsuelleEtablissement,denominationUsuelle1UniteLegale, numeroVoieEtablissement,typeVoieEtablissement,libelleVoieEtablissement, " ;
   $sql = $sql." codePostalEtablissement,libelleCommuneEtablissement,categorieJuridiqueUniteLegale,cj.libelle,etatAdministratifEtablissement,trancheEffectifsEtablissement,
-  anneeEffectifsEtablissement, " ;
+  su.activitePrincipaleUniteLegale,anneeEffectifsEtablissement, " ;
   $sql = $sql." sn.libelle as libelleActivite  FROM SIRENE_StockUniteLegale su,  SIRENE_StockEtablissement se, SIRENE_CategorieJuridique cj , SIRENE_NAF sn " ;
-  $sql = $sql." WHERE se.codePostalEtablissement = \"".$CodePostal."\" " ;
+
+  $sql = $sql." WHERE se.siren = su.siren " ;
+
+  if ($CodePostal != "")
+    $sql = $sql." and se.codePostalEtablissement = \"".$CodePostal."\" " ;
 
   if ($TypeStructure == "Entrepreneur individuel")
     $sql = $sql." and su.categorieJuridiqueUniteLegale = 1000  " ;
@@ -240,21 +247,20 @@ if ($CodePostal != "")
     }
 
   }
-  
+
 
   $sql = $sql." and su.statutDiffusionUniteLegale = 'O' " ;
-  $sql = $sql." and se.siren = su.siren " ;
   $sql = $sql." and su.activitePrincipaleUniteLegale = sn.code " ;
-  $sql = $sql." and su.categorieJuridiqueUniteLegale = cj.code) as temp " ;
+  $sql = $sql." and su.categorieJuridiqueUniteLegale = cj.code " ;
 
-  $sql = $sql." left outer join SIRENE_Infos_UniteLegale siu  " ;
-  $sql = $sql." on temp.siren = siu.siren " ;
 
-  $sql = $sql." order by temp.libelleActivite, temp.siret" ;
+
+  $sql = $sql." order by libelleActivite, siret" ;
+
 
   #$contenu = $contenu."<br><br><br>" ;
   #$contenu = $contenu.$sql."<br>" ;
-  
+
   $result = $conn->query($sql);
 
 
@@ -269,7 +275,7 @@ if ($CodePostal != "")
   $contenu = $contenu."<table id=\"TableResults\" class=\"table table-bordered table-striped\" style=\"background-color:#DDDDDD;border:solid #0000FF\" >\n" ;
 
 
-  $contenu = $contenu."<thead style=\"background-color)#AAAAAA\" >  <th>Numéro</th>  <th>Siren</th> <th>Siret</th> <th>Statut</th>  <th>Nombre Années existence</th>  <th>Sigle</th> <th>Prénom</th> <th>Nom</th> <th>Dénomination</th>  <th>Numéro rue</th> <th>Rue</th> <th>Code Postal</th> <th>Commune</th> <th>Dirigeant</th>  <th>Effectif</th> <th>Structure Juridique</th> <th>Activité</th> " ;
+  $contenu = $contenu."<thead style=\"background-color)#AAAAAA\" >  <th>Numéro</th>  <th>Siren</th> <th>Siret</th> <th>Statut</th>  <th>Nombre Années existence</th>  <th>Sigle</th> <th>Prénom</th> <th>Nom</th> <th>Dénomination</th>  <th>Numéro rue</th> <th>Rue</th> <th>Code Postal</th> <th>Commune</th>   <th>Effectif</th> <th>Structure Juridique</th> <th>NAF</th> <th>Activité</th> " ;
   //$contenu = $contenu." <th>Ligne</th> "; 
   $contenu = $contenu." </thead>\n";
   $contenu = $contenu."<tbody>" ;
@@ -306,7 +312,7 @@ if ($CodePostal != "")
       $contenu = $contenu."<td>".$difference->y."</td>" ;
 
       
-       
+        
       
       $contenu = $contenu."<td>".$row['sigleUniteLegale']."</td>" ;
       $contenu = $contenu."<td>".$row['prenomUsuelUniteLegale']."</td>" ;
@@ -331,10 +337,10 @@ if ($CodePostal != "")
       $contenu = $contenu."<td>".$row['codePostalEtablissement']."</td>" ;
       $contenu = $contenu."<td>".$row['libelleCommuneEtablissement']."</td>" ;
 
-      $contenu = $contenu."<td>".$row['Dirigeants']."</td>" ;
       $contenu = $contenu."<td>".GetNombreEmployes($row['trancheEffectifsEtablissement'])."</td>" ;
 
       $contenu = $contenu."<td>".$row['libelle']."</td>" ;
+      $contenu = $contenu."<td>".$row['activitePrincipaleUniteLegale']."</td>" ;
       $contenu = $contenu."<td>".$row['libelleActivite']."</td>" ;
       //$contenu = $contenu."<td>".$row['Ligne']."</td>" ;
     
@@ -354,17 +360,16 @@ if ($CodePostal != "")
 
       $i = $i+1 ;
     }
+  
 
 
+    $contenu = $contenu."</tbody>" ;
+    $contenu = $contenu."</table>\n" ;
+    $contenu = $contenu."</div>" ;
+
+    // on ferme la connection à la base
+    $conn->close();
   }
-
-
-  $contenu = $contenu."</tbody>" ;
-  $contenu = $contenu."</table>\n" ;
-  $contenu = $contenu."</div>" ;
-
-  // on ferme la connection à la base
-  $conn->close();
 }
 
 
