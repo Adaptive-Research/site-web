@@ -47,7 +47,10 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,1,'Homme','Daniel','Dupard','ddupard68@gmail.com','$2y$10$Tq78wolGcEXPK5A4oLh/nOWqh.yVcD6NWkTK/AqBxCiVs04766fqC',1,'FullAdmin','FR','Français',NULL,'2022-07-02 07:40:07',NULL),(2,1,'Homme','Demo','','demo@gmail.com','$2y$10$WMjwKgPHhyFSU668nLyr/O3mInqoNhd9ITz7YMpj6s37HRikH4wu2',1,'Demo','FR','Français',NULL,'2022-07-02 07:40:07',NULL),(3,1,'Homme','amadeus','fleury tigri','fleurytigri@yahoo.com','$2y$10$IGqigmoXu0B38XyF.Qib1eG0WXuNZ8W7A8ypZ.R7evG2Dh7NBlZl2',0,'FullAdmin','EN','Anglais',1,'2022-07-02 15:37:47',NULL);
+INSERT INTO `users` VALUES (1,1,'MR','Daniel','Dupard','ddupard68@gmail.com','$2y$10$Tq78wolGcEXPK5A4oLh/nOWqh.yVcD6NWkTK/AqBxCiVs04766fqC',1,'FullAdmin','FR','Français',NULL,'2022-07-02 07:40:07',NULL),(2,1,'Homme','Demo','','demo@gmail.com','$2y$10$WMjwKgPHhyFSU668nLyr/O3mInqoNhd9ITz7YMpj6s37HRikH4wu2',1,'Demo','FR','Français',NULL,'2022-07-02 07:40:07',NULL) ;
+INSERT INTO `users` VALUES (3,1,'Homme','Charbel','MeINSERT INTO `users` VALUES hinto','mehintoangemariecharbel@gmail.com','$2y$10$IGqigmoXu0B38XyF.Qib1eG0WXuNZ8W7A8ypZ.R7evG2Dh7NBlZl2',0,'FullAdmin','FR','Français',1,'2022-07-02 15:37:47',NULL);
+INSERT INTO `users` VALUES (4,1,'','','Site Web','contact@PlusDeCA.fr','$2y$10$Tq78wolGcEXPK5A4oLh/nOWqh.yVcD6NWkTK/AqBxCiVs04766fqC',1,'FullAdmin','FR','Français',NULL,'2022-07-02 07:40:07',NULL)
+
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

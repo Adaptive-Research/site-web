@@ -23,7 +23,12 @@ if (session_status() == PHP_SESSION_NONE)
 
 if (isset($_POST['Submit']))
 {
-    if (empty($_POST['Email']))
+    $Prenom = $_POST['Prenom'] ;
+    $Nom =  $_POST['Nom'] ;
+    $Email = $Post['Email'] ;
+
+
+    if (empty($Prenom) or empty($Nom) or empty($Email) )
     {
         unset($_POST['Submit']) ;
     }
@@ -34,7 +39,7 @@ if (isset($_POST['Submit']))
         try
         {
             # quand l'utilisateur se loggue, on crée une session
-            $obj->login(htmlspecialchars($_POST['Email']), htmlspecialchars($_POST['Password']), 1);
+            $obj->login(htmlspecialchars($Email), htmlspecialchars($_POST['Password']), 1);
             
                       
             if ($_SESSION['current_user']->group_name == "FullAdmin")
@@ -67,6 +72,11 @@ if (isset($_POST['Submit']))
 $fheader = $baseLP."/templates/header.html" ;
 $fichier = $baseLP."/templates/Signin.html" ;
 $footer = $baseLP."/templates/footer2.html" ;
+
+
+
+
+
 
 
 // récupération du contenu
