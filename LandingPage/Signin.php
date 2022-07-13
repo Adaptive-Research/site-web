@@ -26,6 +26,7 @@ if (isset($_POST['Submit']))
     $Prenom = $_POST['Prenom'] ;
     $Nom =  $_POST['Nom'] ;
     $Email = $Post['Email'] ;
+    $genre = "Homme" ;
 
 
     if (empty($Prenom) or empty($Nom) or empty($Email) )
@@ -38,24 +39,15 @@ if (isset($_POST['Submit']))
         $obj = new User;
         try
         {
-            # quand l'utilisateur se loggue, on crée une session
-            $obj->login(htmlspecialchars($Email), htmlspecialchars($_POST['Password']), 1);
+            # on ajoute l'utilisateur
+            $obj->addUser($genre,$Prenom,$Nom,htmlspecialchars($Email), htmlspecialchars($_POST['Password']), 0,"Français","demo",4);
+            header('Location: /EmailSent') ;
             
-                      
-            if ($_SESSION['current_user']->group_name == "FullAdmin")
-                header('Location: /FullAdmin') ;
-            if ($_SESSION['current_user']->group_name == "Demo")
-                header('Location: /Demo') ;
-            
-
-            exit() ;
-            
-        
         }
         catch (UserError $u)
         {
             $MyError = $u->getMessage();
-
+            echo "<script>alert('".$MyError."');</script>";
         }
     }
 }
@@ -83,6 +75,12 @@ $footer = $baseLP."/templates/footer2.html" ;
 $contenu = file_get_contents($fheader) ;
 $contenu = $contenu.file_get_contents($fichier) ;
 $contenu = $contenu.file_get_contents($footer) ;
+
+
+$contenu = str_replace('[PRENOM]',$Prenom,$contenu) ;
+$contenu = str_replace('[NOM]',$Nom,$contenu) ;
+$contenu = str_replace('[EMAIL]',$Email,$contenu) ;
+
 
 
 
