@@ -145,6 +145,11 @@ Route::add($baseURL.'/SIGNIN_DEMO',function(){
     require  $baseLP.'/Signin.php' ;
 },'post');
 
+Route::add($baseURL.'/EmailSent',function(){
+    global $ServeurWeb, $baseREP,$baseLP,$baseURL,$basePython,$py_Articles,$py_Keywords,$py_Syntaxe,$py_PagesWeb  ;
+    require  $baseLP.'/EmailSent.php' ;
+});
+
 
 
 

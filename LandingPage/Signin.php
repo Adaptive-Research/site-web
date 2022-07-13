@@ -25,7 +25,7 @@ if (isset($_POST['Submit']))
 {
     $Prenom = $_POST['Prenom'] ;
     $Nom =  $_POST['Nom'] ;
-    $Email = $Post['Email'] ;
+    $Email = $_POST['Email'] ;
     $genre = "Homme" ;
 
 
@@ -40,7 +40,9 @@ if (isset($_POST['Submit']))
         try
         {
             # on ajoute l'utilisateur
-            $obj->addUser($genre,$Prenom,$Nom,htmlspecialchars($Email), htmlspecialchars($_POST['Password']), 0,"Français","demo",4);
+            $pass =  htmlspecialchars($_POST['Password']) ;
+            $pass2 = password_hash($pass, PASSWORD_BCRYPT, array('cost' => 10));
+            $obj->addUser($genre,$Prenom,$Nom,htmlspecialchars($Email),$pass2,"Français","Demo",4);
             header('Location: /EmailSent') ;
             
         }

@@ -61,7 +61,9 @@ if ( isset($_POST['Submit']) ) // Soit c'est la 1ère sauvegarde, soit c'est au 
 	{
 		try
 		{
-			$res = $objU->addUser(htmlspecialchars($_POST['Genre']),htmlspecialchars($_POST['Prenom']),htmlspecialchars($_POST['Nom']),htmlspecialchars($_POST['Email']),htmlspecialchars($_POST['Password1']), htmlspecialchars($_POST['Langue']), htmlspecialchars($_POST['group_name']), $_SESSION['current_user']->id ) ;
+			$pass =  htmlspecialchars($_POST['Password1']) ;
+            $pass2 = password_hash($pass, PASSWORD_BCRYPT, array('cost' => 10));
+			$res = $objU->addUser(htmlspecialchars($_POST['Genre']),htmlspecialchars($_POST['Prenom']),htmlspecialchars($_POST['Nom']),htmlspecialchars($_POST['Email']),$pass2, htmlspecialchars($_POST['Langue']), htmlspecialchars($_POST['group_name']), $_SESSION['current_user']->id ) ;
 			if (!$res)
 				$MyError = "Problème de sauvegarde de l'utilisateur" ;
 			else

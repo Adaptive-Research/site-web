@@ -114,11 +114,21 @@
 
 		public function addUser($genre,$prenom,$nom, $email , $pass, $l, $gn, $a)
 		{
-
+			
 			if($this->searchUser($email))
 				throw new UserError("Email address already exists.");
+			
 
-			$stmt = $this->db->query("insert into users (iscurrent, Genre, Prenom, Nom, Email, Password, email_verified, Langue, group_name,author) values(?,?,?,?,?,?,?,?,?,?)", [1,$genre,$prenom,$nom,$email, $this->generatePassHash($pass),0, $l, $gn,$a]);
+			$sql = "insert into users (iscurrent, Genre, Prenom, Nom, Email, Password,  Langue, group_name,author) values (1,\"".$genre."\", " ;
+			$sql = $sql." \"".$prenom."\", " ;
+			$sql = $sql." \"".$nom."\", " ;
+			$sql = $sql." \"".$email."\", " ;
+			$sql = $sql." \"".$pass."\", " ;
+			$sql = $sql." \"".$l."\", " ;
+			$sql = $sql." \"".$gn."\", " ;
+			$sql = $sql." ".$a." ) " ;
+
+			$stmt = $this->db->query($sql) ;
 			if($stmt->affected_rows == 1)
 			{
 				$idUser = $this->GetLastIDCreated() ;
