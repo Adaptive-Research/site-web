@@ -97,10 +97,11 @@ class Route{
             array_shift($matches);// Remove basepath
 
           // on loggue la demande
+          /*
           $objLP = new LogPage ;
           $objLP->SetPage($_SERVER['REMOTE_ADDR'],$path,$method) ;
           $objLP->Save() ;
-
+          */
           call_user_func_array($route['function'], $matches);
 
           $route_match_found = true;
