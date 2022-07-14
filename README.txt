@@ -1,5 +1,5 @@
 /css/
-/images/
+/img/
 /fonts/
 /js/
 
