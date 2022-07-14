@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 :root{
  --color-primary: #0B162C;
+ --color-light: rgba(211, 195, 195, 0.4);
 }
 
 *{
@@ -106,19 +107,51 @@ body{
 .form-content .signup-form{
   width: calc(100% / 2 - 25px);
 }
+.forms .form-content .img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 2rem 3rem var(--color-light);
+}
+.forms .form-content .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.form-content .login-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-content .login-form form{
+  width: 100% !important;
+}
 .forms .form-content .title{
-  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   font-size: 24px;
   font-weight: 500;
   color: #333;
+  position: relative;
+  margin-top: 10px;
 }
 .forms .form-content .title:before{
   content: '';
   position: absolute;
-  left: 0;
   bottom: 0;
   height: 3px;
-  width: 25px;
+  width: 25% !important;
   background: var( --color-primary);
 }
 .forms .signup-form  .title:before{
@@ -205,6 +238,7 @@ body{
 .show-btn i.hide-btn::before{
     content: "\f070";
 }
+.ConfirmPasswordFieldError,
 .PasswordFieldError{
     font-size: 12px;
     text-align: center;

@@ -15,68 +15,82 @@
       <div class="front"  style="backface-visibility: hidden;" >
         <img src="img/charbel/frontImg.jpg" alt="">
         <div class="text">
-            <span class="text-1">Every new friend is a <br> new adventure</span>
-            <span class="text-2">Let's get connected</span>
+          <span class="text-1">Bienvenue sur Plus de CA</span>
+          <span class="text-2">Restons Connecter</span>
         </div>
       </div>
       <div class="back" style="position: absolute; width:100%;height:100%; transform: rotateY(-180deg); backface-visibility: hidden;">
         <img src="img/charbel/backImg.jpg" alt="">
         <div class="text">
-            <span class="text-1">Every new friend is a <br> new adventure</span>
-            <span class="text-2">Let's get connected</span>
+          <span class="text-1">Bienvenue sur Plus de CA</span>
+          <span class="text-2">Restons Connecter</span>
         </div>
     </div>
     </div>
     <div class="forms">
         <div class="form-content">
           <div class="login-form">
-            <div class="title">Login</div>
-          <form action="#">
-            <div class="input-boxes">
-              <div class="input-box">
-                <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
-              </div>
-              <div class="input-box">
-                <i class="fas fa-lock"></i>
-                <input type="password" class="PasswordField" placeholder="Enter your password" required>
-                <span class="show-btn"><i class="fas fa-eye show-icon"></i></span>
-              </div>
-              <div class="text"><a href="/Forgotten">Forgot password?</a></div>
-              <div class="button input-box">
-                <input type="submit" value="Submit">
-              </div>
-              <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
+            <div class="img">
+              <img src="../../img/charbel/Logo.png" alt="Logo entreprise">
             </div>
-        </form>
+            <div class="title">Connexion</div>
+            <form action="#" id="Signin-form" novalidate>
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" id="SigninEmail" placeholder="Entrez votre mail" required>
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input type="password" class="PasswordField" id="LoginPassword" placeholder="Entrez votre mot de passe" required>
+                  <span class="show-btn"><i class="fas fa-eye show-icon"></i></span>
+                </div>
+                <span id="SigninEmailError"></span><br>
+                <span id="EmptyError"></span>
+                <div class="text"><a href="/Forgotten">Mot de passe oublié?</a></div>
+                <div class="button input-box">
+                  <input type="submit" value="Se connecter">
+                </div>
+                <div class="text sign-up-text">Vous êtes nouveau ici? <label for="flip">S'inscrire</label></div>
+              </div>
+          </form>
       </div>
         <div class="signup-form">
-          <div class="title">Signup</div>
-        <form action="#">
+          <div class="title">Inscription</div>
+      <form action="#" id="Signup-form" novalidate>
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Enter your name" required>
+                <input type="text" placeholder="Entrez votre nom" id="Nom" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Entrez votre prénom" id="Prenom" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="Enter your email" required>
+                <input type="email" placeholder="Entrez votre mail" id="Email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" class="PasswordField Primary" placeholder="Enter your password" required>
+                <input type="password" class="PasswordField Primary" placeholder="Entrez votre mot de passe" required>
                 <span class="show-btn"><i class="fas fa-eye show-icon"></i></span>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password"class="PasswordField Secondary"  placeholder="Confirm your password" required>
+                <input type="password"class="PasswordField Secondary"  placeholder="Confirmez votre mot de passe" required>
                 <span class="show-btn"><i class="fas fa-eye show-icon"></i></span>
               </div>
-              <span class="PasswordFieldError"></span>
+              <div class="Errors">
+                <span id="MailError"></span> <br>
+                <span class="PasswordFieldError"></span><br>
+                <span class="ConfirmPasswordFieldError"></span><br>
+                <span id="SignupEmptyError"></span>
+              </div>
               <div class="button input-box">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Soumettre">
               </div>
-              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+              <div class="text sign-up-text">Avez-vous déjà un compte? <label for="flip">Se connecter</label></div>
             </div>
       </form>
     </div>
@@ -88,48 +102,125 @@
   <script>
     let passwordField = document.querySelectorAll(".PasswordField");
     let passwordFieldError = document.querySelector(".PasswordFieldError");
+    let ConfirmpasswordFieldError = document.querySelector(".ConfirmPasswordFieldError");
+    let EmptyError = document.getElementById("EmptyError");
     let PrimaryPassword = document.querySelector(".PasswordField.Primary");
+    let LoginPassword = document.getElementById("LoginPassword");
     let SecondaryPassword = document.querySelector(".PasswordField.Secondary");
-    
+    let Email_Regex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;//The regex for the Email
+    let Email = document.getElementById("Email");
+    let SigninEmail = document.getElementById("SigninEmail");
+    let SigninEmailError = document.getElementById("SigninEmailError");
+    let EmailError = document.getElementById("MailError");
+    let Nom = document.getElementById("Nom");
+    let Prenom = document.getElementById("Prenom");
     var regExpWeak = /^(?=.*[0-9])(?=.*[!@;#$%^&*])(?=.*[A-Z])(?=.*[a-z])[a-zA-Z0-9!@;#$%^&*]{8,16}$/;
-
+    let SignupEmptyError = document.getElementById("SignupEmptyError");
     let ShowIcon = document.querySelectorAll(".show-icon");
 
 
     for (let i = 0; i < passwordField.length; i++) {
         for (let j = 0; j < ShowIcon.length; j++) {
+          ShowIcon[i].classList.add("hide-btn");
             ShowIcon[i].onclick = (()=>{
                 if(passwordField[i].type === "password"){
                     passwordField[i].type = "text";
-                    ShowIcon[i].classList.add("hide-btn");
+                    ShowIcon[i].classList.remove("hide-btn");
                     }else{
                     passwordField[i].type = "password";
-                    ShowIcon[i].classList.remove("hide-btn");
+                    ShowIcon[i].classList.add("hide-btn");
                 }
             });
-            passwordField[i].onfocus = (()=>{
+        }
+    }
+    PrimaryPassword.onfocus = (()=>{
               if (PrimaryPassword.value.trim() == '') {
-                    passwordFieldError.textContent = "The field is empty";
+                    passwordFieldError.textContent = "Le champs du mot de passe est vide";
                     passwordFieldError.style.color="red";
               }
               setInterval(() => {
                 if (PrimaryPassword.value.trim() == '') {
-                    passwordFieldError.textContent = "The field is empty";
+                    passwordFieldError.textContent = "Le champs du mot de passe est vide";
                     passwordFieldError.style.color="red";
                 }
                 else if (regExpWeak.test(PrimaryPassword.value) == true) {
-                    passwordFieldError.textContent = "Your password is valid";
+                    passwordFieldError.textContent = "Votre mot de passe est valide";
                     passwordFieldError.style.color="green";
                 }
                 else{
-                  passwordFieldError.textContent = "Your password must contain between 8 and 16 chars with an uppercase, a lowercase, a digit and a special char (!@;#$%^&*)";
+                  passwordFieldError.textContent = "Votre mot de passe doit contenir une Majuscule, un minuscule, un chiffre et un caractère spéciale";
                   passwordFieldError.style.color="red";
                 }
                 
               }, 1500);
             });
+            SecondaryPassword.onfocus = (()=>{
+              if (SecondaryPassword.value.trim() == '') {
+                ConfirmpasswordFieldError.textContent = "Le champs de confirmation est vide";
+                ConfirmpasswordFieldError.style.color="red";
+              }
+              setInterval(() => {
+                if (SecondaryPassword.value.trim() == '') {
+                  ConfirmpasswordFieldError.textContent = "Le champs de confirmation est vide";
+                  ConfirmpasswordFieldError.style.color="red";
+                }
+                else if (PrimaryPassword.value === SecondaryPassword.value) {
+                  ConfirmpasswordFieldError.textContent = "Les mots de passes sont conformes";
+                  ConfirmpasswordFieldError.style.color="green";
+                }
+                else{
+                  ConfirmpasswordFieldError.textContent = "Les mots de passes doivent être les mêmes";
+                  ConfirmpasswordFieldError.style.color="red";
+                }
+                
+              }, 1500);
+            });
+    Email.onfocus = (()=>{
+      setInterval(() => {
+        if (Email_Regex.test(Email.value) == false) {
+                EmailError.textContent = "Adresse email non valide";
+                EmailError.style.color="red";
+                e.preventDefault();
+              }else{
+                EmailError.textContent = "Adresse email valide";
+                EmailError.style.color="green";
+                e.preventDefault();
+              }
+      }, 1500);
+    });
+    SigninEmail.onfocus = (()=>{
+      setInterval(() => {
+        if (Email_Regex.test(SigninEmail.value) == false) {
+          SigninEmailError.textContent = "Adresse email non valide";
+          SigninEmailError.style.color="red";
+          SigninEmailError.style.fontSize="12px";
+                e.preventDefault();
+        }else{
+                SigninEmailError.textContent = "Adresse email valide";
+                SigninEmailError.style.color="green";
+                SigninEmailError.style.fontSize="12px";
+                e.preventDefault();
         }
-    }
+      }, 1500);
+    });
+
+    document.getElementById("Signup-form").addEventListener("submit", function (e) {
+            if (Prenom.value.trim() == '' || Nom.value.trim() == '' || PrimaryPassword.value.trim() == '' || SecondaryPassword.value.trim() == '' || Email.value.trim() == '') {
+              SignupEmptyError.textContent = "Veuillez remplir tous les champs";
+              SignupEmptyError.style.color="red";
+              SignupEmptyError.style.fontSize="12px";
+              e.preventDefault();
+            }
+    })
+    document.getElementById("Signin-form").addEventListener("submit", function (e) {
+            if (LoginPassword.value.trim() == '' || SigninEmail.value.trim() == '') {
+              EmptyError.textContent = "Veuillez remplir tous les champs";
+              EmptyError.style.color="red";
+              EmptyError.style.fontSize="12px";
+              e.preventDefault();
+            }
+    })
+
   </script>
 
 
