@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+    <link rel="stylesheet" href="css/charbel/style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front"  style="backface-visibility: hidden;" >
+        <img src="images/charbel/frontImg.jpg" alt="">
+        <div class="text">
+            <span class="text-1">Have You Forgotten your password?<br> Don't Worry!</span>
+            <span class="text-2">Let's get connected</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Reset Your Password</div>
+          <form action="#" id="ResetForm">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Enter your email" id="Email" required>
+              </div>
+              <span id="MailError"></span>
+              <div class="button input-box">
+                <input type="submit" value="Reset Password">
+              </div>
+            </div>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById("ResetForm").addEventListener("submit", function () {
+            let Email_Regex = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;//The regex for the Email
+            let EmailValue = document.getElementById("Email").value;
+            let EmailError = document.getElementById("MailError");
+            if (Email_Regex.test(EmailValue) == false) {
+                EmailError.textContent = "Your mail is not valid";
+                EmailError.style.color="red";
+                e.preventDefault();
+            }
+            else{
+                EmailError.textContent = "Your mail is valid";
+                EmailError.style.color="green";
+                e.preventDefault();
+            }
+    })
+
+  </script>
+</body>
+</html>

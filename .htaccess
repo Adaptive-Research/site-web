@@ -5,8 +5,8 @@ RewriteRule test titi/test.php
 RewriteRule test2 titi/test2.php
 RewriteRule Se-Faire-Connaitre index.php
 RewriteRule Je-me-forme-au-SEO index.php
-RewriteRule SIGNIN index.php
 RewriteRule LOGIN index.php
+RewriteRule Forgotten index.php
 RewriteRule FullAdmin index.php
 RewriteRule Demo  index.php
 RewriteRule logout index.php

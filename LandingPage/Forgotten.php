@@ -2,7 +2,7 @@
     
 // définition des fichiers à lire
 //$fheader = $baseLP."/templates/header.html" ;
-$fichier = $baseLP."/templates/Login.html" ;
+$fichier = $baseLP."/templates/Forgotten.html" ;
 //$footer = $baseLP."/templates/footer.html" ;
 
 

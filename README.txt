@@ -3,6 +3,8 @@
 /fonts/
 /js/
 
+
+
 /index.php  # c'est dans ce fichier que l'on trouve toutes les URLs du site 
 /Route.php
 
