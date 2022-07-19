@@ -49,7 +49,7 @@ $contenu = $contenu."<br>" ;
 $contenu = $contenu."<div  class=\"table-responsive\">\n" ;
 $contenu = $contenu."<table class=\"table table-bordered table-striped\" style=\"background-color:#DDDDDD;border:solid #0000FF\" >\n" ;
 
-$contenu = $contenu."<thead style=\"background-color:#AAAAAA\" > <tr> <th style=\"width:5%\">Edit</th> <th style=\"width:5%\">Del.</th> <th>Prénom</th><th>Nom</th><th>Adresse Mail</th><th style=\"width:10%\">Type</th> <th style=\"width:10%\">Langue</th> </thead>\n";
+$contenu = $contenu."<thead style=\"background-color:#AAAAAA\" > <tr>  <th style=\"width:5%\">Delete</th> <th>Prénom</th><th>Nom</th><th>Adresse Mail</th><th style=\"width:10%\">Type</th> <th style=\"width:10%\">Langue</th> </thead>\n";
 
 
 
@@ -66,7 +66,7 @@ if ($conn->connect_error)
 
 
 // la requête pour récupérer les utilisateurs
-$sql = "select * from users where iscurrent = 1 and Email<>'ddupard68@gmail.com'" ;
+$sql = "select * from users where id >= 4" ;
 
 $result = $conn->query($sql);
 
@@ -86,20 +86,13 @@ if ($result->num_rows > 0)
     // le menu ci-dessous n'est visible que si on donne les droits
     if(isset($_SESSION['current_user']))
     {
-      if ($objAC->IsVisibleBy('./user_modify.php',$_SESSION['current_user']->group_name))
-      {
-        $contenu = $contenu."<td><a href=\"./user_modify.php&id=".$row['id']."\"> <img src=\"./templates/img/b_edit.png\" title=\"Modifier\" alt=\"Modifier\"></a>";
-        $contenu = $contenu." " ;
-      }
-      else
-        $contenu = $contenu."<td>" ;
 
       $contenu = $contenu."</td>" ;
 
       if ($objAC->IsVisibleBy('./user_delete.php',$_SESSION['current_user']->group_name))
       {
 
-        $contenu = $contenu."<td><a href=\"./user_delete.php&id=".$row['id']."\"> <img src=\"./templates/img/b_drop.png\" title=\"Supprimer\" alt=\"Supprimer\"></a>";
+        $contenu = $contenu."<td><a href=\"/delete-User/".$row['id']."/\"> <img src=\"/img/buttons/b_drop.png\" title=\"Supprimer\" alt=\"Supprimer\"></a>";
         $contenu = $contenu." " ;
       }
       else

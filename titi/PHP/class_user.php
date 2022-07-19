@@ -87,7 +87,7 @@
 
 		public function GetLastIDCreated()
 		{
-			$stmt = $this->db->query("select * from users where iscurrent = 1 order by id desc ");
+			$stmt = $this->db->query("select * from users  order by id desc ");
 			if($this->db->getRowCount() >= 1)
 				return $stmt[0]->id;
 			return 0 ;
@@ -119,7 +119,7 @@
 				throw new UserError("Email address already exists.");
 			
 
-			$sql = "insert into users (iscurrent, Genre, Prenom, Nom, Email, Password,  Langue, group_name,author) values (1,\"".$genre."\", " ;
+			$sql = "insert into users ( Genre, Prenom, Nom, Email, Password,  Langue, group_name,author) values (\"".$genre."\", " ;
 			$sql = $sql." \"".$prenom."\", " ;
 			$sql = $sql." \"".$nom."\", " ;
 			$sql = $sql." \"".$email."\", " ;
@@ -153,7 +153,7 @@
 				$col = "Email";
 				$val = $email;
 			}
-			$stmt = $this->db->query("select * from `users` where {$col} = ? and iscurrent = 1",[$val]);
+			$stmt = $this->db->query("select * from `users` where {$col} = ?",[$val]);
 			if($this->db->getRowCount()){
 				return $stmt[0];
 			}

@@ -1,9 +1,7 @@
 <?php
 
 require_once $baseREP.'/PHP/class_user.php' ;
-require_once $baseREP.'/PHP/PageMessage.php' ;
 require_once $baseREP.'/PHP/class_access.php' ;
-
 
 
 use \User\User ;
@@ -23,13 +21,13 @@ if ( isset($_SESSION['current_user']) )
 	$objAC = new Access ;
 	if (! $objAC->IsVisibleBy('./user_delete.php',$_SESSION['current_user']->group_name))
 	{
-		header('Location: ./') ;
+		header('Location: /') ;
 		exit() ;
 	}
 }
 else
 {
-	header('Location: ./') ;
+	header('Location: /') ;
 	exit() ;
 }
 
@@ -38,29 +36,14 @@ else
 
 
 // on a cliqué sur le bouton de sauvegarde de l'article
-if ( isset($_GET['id'])   ) // Soit c'est la 1ère sauvegarde, soit c'est au moins une sauvegarde supplémentaire
+if ( isset($id) ) // Soit c'est la 1ère sauvegarde, soit c'est au moins une sauvegarde supplémentaire
 {
-	if (isset($DEBUG))
-	{
-		// l'utilisateur vient de rentrer son mot de passe
-		$msg = "Variables<br>" ;
-		$msg = $msg."id= ".htmlspecialchars($_GET['id'])."<br>" ;
-		PageMessage($msg) ;
-	}
-
-
 	$objU = new User ;
-  $objU->Delete($_GET['id']) ;
-
-
+  	$objU->Delete($id) ;
 }
 
-header('Location: ./users_showall.php?SessionID='.session_id()) ;
+header('Location: /show-Users') ;
 exit() ;
-
-
-
-
 
 
 ?>
