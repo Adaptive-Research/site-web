@@ -31,7 +31,7 @@ drop table if exists SIRENE_Repartition ;
 CREATE TABLE `SIRENE_Repartition` (
   `CodePostal` varchar(5) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
   `Nombre` bigint NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 --
 -- Dumping data for table `SIRENE_Repartition`

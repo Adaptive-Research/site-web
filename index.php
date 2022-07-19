@@ -128,6 +128,15 @@ Route::add($baseURL.'/Forgotten',function(){
 
 
 
+Route::add($baseURL.'/EmailSent',function(){
+    global $ServeurWeb, $baseREP,$baseLP,$baseURL ;
+    require  $baseLP.'/EmailSent.php' ;
+});
+
+
+
+
+
 
 
 

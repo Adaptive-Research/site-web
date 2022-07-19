@@ -7,7 +7,7 @@ CREATE TABLE SIRENE_Telephone (
 
 siret varchar(14),
 
-URL  varchar(500) DEFAULT NULL,  -- source de l'info
+URL  varchar(500) DEFAULT NULL,  
 Telephone varchar(30) DEFAULT NULL,
 Texte varchar(50)  DEFAULT NULL
 

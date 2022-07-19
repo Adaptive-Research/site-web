@@ -16,11 +16,12 @@ and se.siren = su.siren
 and se.codePostalEtablissement = "77140"
 
 
-SELECT sn.libelle, count(*) FROM `SIRENE_StockUniteLegale` su,  SIRENE_NAF sn  
+SELECT sn.libelle, count(*) as nombre FROM `SIRENE_StockUniteLegale` su,  SIRENE_NAF sn  
 WHERE su.activitePrincipaleUniteLegale = sn.code 
 group by sn.libelle
 
 
+ mysql -u dba -p --execute "use SEO ; SELECT sn.libelle, count(*) FROM SIRENE_StockUniteLegale su,  SIRENE_NAF sn WHERE su.activitePrincipaleUniteLegale = sn.code group by sn.libelle ; "  > res.txt
 
 
 
