@@ -123,8 +123,6 @@ $fichier = $baseLP."/templates/Login.html" ;
 
 // récupération du contenu
 $contenu = "" ;
-
-//$contenu = $contenu.$_POST['Submit'] ;
 $contenu = $contenu.file_get_contents($fichier) ;
 
 

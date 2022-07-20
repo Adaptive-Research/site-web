@@ -5,7 +5,7 @@
 
 
 // on remplace les couleurs en fonction du serveur de dev ou de prod en changeant la classe des balises
-if ($_SERVER["SERVER_ADDR"] == "192.168.1.68" or $_SERVER["SERVER_ADDR"] == "127.0.0.1")
+if ($_SERVER["SERVER_ADDR"] == "192.168.1.68" or $_SERVER["SERVER_ADDR"] == "127.0.0.1" or  $_SERVER["SERVER_NAME"] == "localhost" )
 {
   $contenu = str_replace('-fulladmin','-fulladmin-dev',$contenu) ;
 }
