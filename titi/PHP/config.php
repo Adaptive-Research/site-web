@@ -20,7 +20,7 @@ if ($_SERVER["SERVER_NAME"] == "plusdeca.test")
 
 
 
-// base de données de dev et repertoires data de dev
+// en ip6 l'adresse de localhost est ::1 , mais si on met cette adresse pour servername, cela ne fonctionne pas, donc on doit forcer a 127.0.0.1
 if ($_SERVER["SERVER_NAME"] == "localhost") 
 {
     $servername = "127.0.0.1" ;
@@ -28,7 +28,7 @@ if ($_SERVER["SERVER_NAME"] == "localhost")
     $RepertoireData = "/data-dev/SEO" ;
 }
 
-if ($_SERVER["SERVER_ADDR"] == "192.168.1.68" )
+if ($_SERVER["SERVER_NAME"] == "seo.test" )
 {
     $ServeurWeb = "http://seo.test" ;
 }
